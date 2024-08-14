@@ -1,0 +1,1387 @@
+<!-- Start block -->
+<section class="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5 antialiased">
+    <div class="mx-auto max-w-screen-2xl px-4 lg:px-12">
+        <!-- Start coding here -->
+        <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
+            <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4 border-b dark:border-gray-700">
+                <div class="w-full flex items-center space-x-3">
+                    <h5 class="dark:text-white font-semibold">Flowbite Products</h5>
+                    <div class="text-gray-400 font-medium">6,560 results</div>
+                    <button type="button" class="group hover:cursor" data-tooltip-target="results-tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">More info</span>
+                    </button>
+                    <div id="results-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        Showing 1-10 of 6,560 results
+                        <div class="tooltip-arrow" data-popper-arrow=""></div>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col md:flex-row items-center justify-end space-y-3 md:space-y-0 md:space-x-3">
+                    <button type="button" id="createProductButton" data-modal-target="createProductModal" data-modal-toggle="createProductModal" class="w-full md:w-auto flex whitespace-nowrap items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-3 py-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
+                        <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
+                        </svg>
+                        Add new product
+                    </button>
+                    <button id="settingsDropdownButton" data-dropdown-toggle="settingsDropdown" class="w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">
+                        Table settings
+                        <svg class="-mr-1 ml-1.5 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path clip-rule="evenodd" fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                        </svg>
+                    </button>
+                    <div id="settingsDropdown" class="z-10 hidden w-56 p-3 bg-white rounded-lg shadow dark:bg-gray-700">
+                        <h6 class="mb-2 text-sm font-medium text-gray-900 dark:text-white">Columns</h6>
+                        <ul class="space-y-1 text-sm" aria-labelledby="settingsDropdownButton">
+                            <li>
+                                <label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+                                    <input type="checkbox" value="" class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    Product
+                                </label>
+                            </li>
+                            <li>
+                                <label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+                                    <input type="checkbox" value="" class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    Category
+                                </label>
+                            </li>
+                            <li>
+                                <label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+                                    <input type="checkbox" value="" class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    Brand
+                                </label>
+                            </li>
+                            <li>
+                                <label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+                                    <input type="checkbox" value="" class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    Price
+                                </label>
+                            </li>
+                            <li>
+                                <label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+                                    <input type="checkbox" value="" checked="" class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    Stock
+                                </label>
+                            </li>
+                            <li>
+                                <label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+                                    <input type="checkbox" value="" class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    Status
+                                </label>
+                            </li>
+                        </ul>
+                        <h6 class="mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Additional settings</h6>
+                        <ul class="space-y-1 text-sm" aria-labelledby="settingsDropdownButton">
+                            <li>
+                                <label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+                                    <input type="checkbox" value="" checked="" class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    Show additional info
+                                </label>
+                            </li>
+                            <li>
+                                <label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+                                    <input type="checkbox" value="" checked="" class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    Show images
+                                </label>
+                            </li>
+                        </ul>
+                        <h6 class="mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Export</h6>
+                        <ul class="space-y-1 text-sm" aria-labelledby="settingsDropdownButton">
+                            <li>
+                                <label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+                                    <input type="checkbox" value="" class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    Export CSV
+                                </label>
+                            </li>
+                        </ul>
+                        <h6 class="mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Row height</h6>
+                        <ul class="space-y-1 text-sm" aria-labelledby="settingsDropdownButton">
+                            <li>
+                                <label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+                                    <input type="radio" value="" name="row-height" checked="" class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded-full text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    Normal
+                                </label>
+                            </li>
+                            <li>
+                                <label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+                                    <input type="radio" value="" name="row-height" class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded-full text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    Compact
+                                </label>
+                            </li>
+                        </ul>
+                        <a href="#" class="flex items-center text-sm font-medium text-primary-600 dark:text-primary-500 hover:underline mt-4 ml-1.5">Apply to all</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col-reverse md:flex-row items-start md:items-center justify-between md:space-x-4 p-4 border-b dark:border-gray-700">
+                <div class="mt-3 md:mt-0">
+                    <button id="actionsDropdownButton" data-dropdown-toggle="actionsDropdown" class="w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">
+                        <svg class="-ml-1 mr-1.5 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path clip-rule="evenodd" fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                        </svg>
+                        Actions
+                    </button>
+                    <div id="actionsDropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="actionsDropdownButton">
+                            <li>
+                                <a href="#" class="flex items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-gray-700 dark:text-gray-200">
+                                    <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" />
+                                    </svg>
+                                    Edit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-gray-700 dark:text-gray-200">
+                                    <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" />
+                                    </svg>
+                                    Preview
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 text-red-500 dark:hover:text-red-400">
+                                    <svg class="w-4 h-4 mr-2" viewbox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M6.09922 0.300781C5.93212 0.30087 5.76835 0.347476 5.62625 0.435378C5.48414 0.523281 5.36931 0.649009 5.29462 0.798481L4.64302 2.10078H1.59922C1.36052 2.10078 1.13161 2.1956 0.962823 2.36439C0.79404 2.53317 0.699219 2.76209 0.699219 3.00078C0.699219 3.23948 0.79404 3.46839 0.962823 3.63718C1.13161 3.80596 1.36052 3.90078 1.59922 3.90078V12.9008C1.59922 13.3782 1.78886 13.836 2.12643 14.1736C2.46399 14.5111 2.92183 14.7008 3.39922 14.7008H10.5992C11.0766 14.7008 11.5344 14.5111 11.872 14.1736C12.2096 13.836 12.3992 13.3782 12.3992 12.9008V3.90078C12.6379 3.90078 12.8668 3.80596 13.0356 3.63718C13.2044 3.46839 13.2992 3.23948 13.2992 3.00078C13.2992 2.76209 13.2044 2.53317 13.0356 2.36439C12.8668 2.1956 12.6379 2.10078 12.3992 2.10078H9.35542L8.70382 0.798481C8.62913 0.649009 8.5143 0.523281 8.37219 0.435378C8.23009 0.347476 8.06631 0.30087 7.89922 0.300781H6.09922ZM4.29922 5.70078C4.29922 5.46209 4.39404 5.23317 4.56282 5.06439C4.73161 4.8956 4.96052 4.80078 5.19922 4.80078C5.43791 4.80078 5.66683 4.8956 5.83561 5.06439C6.0044 5.23317 6.09922 5.46209 6.09922 5.70078V11.1008C6.09922 11.3395 6.0044 11.5684 5.83561 11.7372C5.66683 11.906 5.43791 12.0008 5.19922 12.0008C4.96052 12.0008 4.73161 11.906 4.56282 11.7372C4.39404 11.5684 4.29922 11.3395 4.29922 11.1008V5.70078ZM8.79922 4.80078C8.56052 4.80078 8.33161 4.8956 8.16282 5.06439C7.99404 5.23317 7.89922 5.46209 7.89922 5.70078V11.1008C7.89922 11.3395 7.99404 11.5684 8.16282 11.7372C8.33161 11.906 8.56052 12.0008 8.79922 12.0008C9.03791 12.0008 9.26683 11.906 9.43561 11.7372C9.6044 11.5684 9.69922 11.3395 9.69922 11.1008V5.70078C9.69922 5.46209 9.6044 5.23317 9.43561 5.06439C9.26683 4.8956 9.03791 4.80078 8.79922 4.80078Z" />
+                                    </svg>
+                                    Delete
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 w-full lg:w-2/3 md:gap-4">
+                    <div class="w-full"><label for="brand" class="sr-only">Brand</label><select id="brand" class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"><option selected="">Brand</option><option value="purple">Samsung</option><option value="primary">Apple</option><option value="pink">Pink</option><option value="green">Green</option></select></div>
+                    <div class="w-full"><label for="price" class="sr-only">Price</label><select id="price" class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"><option selected="">Price</option><option value="below-100">$ 1-100</option><option value="below-500">$ 101-500</option><option value="below-1000">$ 501-1000</option><option value="over-1000">$ 1001+</option></select></div>
+                    <div class="w-full"><label for="category" class="sr-only">Category</label><select id="category" class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"><option selected="">Category</option><option value="pc">PC</option><option value="phone">Phone</option><option value="tablet">Tablet</option><option value="console">Gaming/Console</option></select></div>
+                    <div class="w-full"><label for="color" class="sr-only">Color</label><select id="color" class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"><option selected="">Color</option><option value="purple">Purple</option><option value="primary">primary</option><option value="pink">Pink</option><option value="green">Green</option></select></div>
+                </div>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs uppercase bg-gray-50 dark:bg-gray-700">
+                        <tr>
+                            <th scope="col" class="p-4">
+                                <div class="flex items-center">
+                                    <input id="checkbox-all" type="checkbox" class="w-4 h-4 text-primary-600 bg-gray-100 rounded border-gray-300 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-all" class="sr-only">checkbox</label>
+                                </div>
+                            </th>
+                            <th scope="col" class="px-4 py-3">
+                                <span class="sr-only">Expand/Collapse Row</span>
+                            </th>
+                            <th scope="col" class="px-4 py-3 min-w-[14rem]">Product</th>
+                            <th scope="col" class="px-4 py-3 min-w-[10rem]">
+                                Category
+                                <svg class="h-4 w-4 ml-1 inline-block" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z" />
+                                </svg>
+                            </th>
+                            <th scope="col" class="px-4 py-3 min-w-[7rem]">
+                                Brand
+                                <svg class="h-4 w-4 ml-1 inline-block" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z" />
+                                </svg>
+                            </th>
+                            <th scope="col" class="px-4 py-3 min-w-[6rem]">
+                                Price
+                                <svg class="h-4 w-4 ml-1 inline-block" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z" />
+                                </svg>
+                            </th>
+                            <th scope="col" class="px-4 py-3 min-w-[7rem]">
+                                Stock
+                                <svg class="h-4 w-4 ml-1 inline-block" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z" />
+                                </svg>
+                            </th>
+                            <th scope="col" class="px-4 py-3 min-w-[12rem]">
+                                Total Sales
+                                <svg class="h-4 w-4 ml-1 inline-block" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z" />
+                                </svg>
+                            </th>
+                            <th scope="col" class="px-4 py-3 min-w-[7rem]">
+                                Status
+                                <svg class="h-4 w-4 ml-1 inline-block" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z" />
+                                </svg>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody data-accordion="table-column">
+                        <tr class="border-b dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer transition" id="table-column-header-0" data-accordion-target="#table-column-body-0" aria-expanded="false" aria-controls="table-column-body-0">
+                            <td class="px-4 py-3 w-4">
+                                <div class="flex items-center">
+                                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 text-primary-600 bg-gray-100 rounded border-gray-300 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                                </div>
+                            </td>
+                            <td class="p-3 w-4">
+                                <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewbox="0 0 20 20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </td>
+                            <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white flex items-center">
+                                <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="iMac Front Image" class="h-8 w-auto mr-3">
+                                Apple iMac 27&#34;
+                            </th>
+                            <td class="px-4 py-3">PC</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">$2999</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">200</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">245</td>
+                            <td class="px-4 py-3 whitespace-nowrap">
+                                <div class="w-fit bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-100 dark:text-green-800">Active</div>
+                            </td>
+                        </tr>
+                        <tr class="hidden flex-1 overflow-x-auto w-full" id="table-column-body-0" aria-labelledby="table-column-header-0">
+                            <td class="p-4 border-b dark:border-gray-700" colspan="9">
+                                <div class="grid grid-cols-4 gap-4 mb-4">
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="iMac Front Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png" alt="iMac Side Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image" class="h-full w-auto">
+                                    </div>
+                                </div>
+                                <div>
+                                    <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Details</h6>
+                                    <div class="text-base text-gray-500 dark:text-gray-400 max-w-screen-md">Standard glass, 3.8GHz 8-core 10th-generation Intel Core i7 processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4 memory, Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD storage, Gigabit Ethernet, Magic Mouse 2, Magic Keyboard - US.</div>
+                                </div>
+                                <div class="grid grid-cols-4 gap-4 mt-4">
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col items-start justify-between">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Product State</h6>
+                                        <div class="bg-primary-100 text-primary-800 text-xs font-medium px-2.5 py-0.5 rounded-md dark:bg-primary-200 dark:text-primary-800 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            New
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col justify-between">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Shipping</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                            </svg>
+                                            Worldwide
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Colors</h6>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="rounded-full h-6 w-6 bg-purple-600"></div>
+                                            <div class="rounded-full h-6 w-6 bg-indigo-400"></div>
+                                            <div class="rounded-full h-6 w-6 bg-primary-600"></div>
+                                            <div class="rounded-full h-6 w-6 bg-pink-400"></div>
+                                            <div class="rounded-full h-6 w-6 bg-teal-300"></div>
+                                            <div class="rounded-full h-6 w-6 bg-green-300"></div>
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Brand</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Apple</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Sold by</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Flowbite</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Ships from</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Flowbite</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Dimensions (cm)</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">105 x 15 x 23</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Item weight</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">12kg</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3 mt-4">
+                                    <button type="button" data-modal-target="updateProductModal" data-modal-toggle="updateProductModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                                            <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
+                                        </svg>
+                                        Edit
+                                    </button>
+                                    <button type="button" data-modal-target="readProductModal" data-modal-toggle="readProductModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Preview</button>
+                                    <button type="button" data-modal-target="deleteModal" data-modal-toggle="deleteModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 rounded-lg dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                        </svg>
+                                        Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer transition" id="table-column-header-1" data-accordion-target="#table-column-body-1" aria-expanded="false" aria-controls="table-column-body-1">
+                            <td class="px-4 py-3 w-4">
+                                <div class="flex items-center">
+                                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 text-primary-600 bg-gray-100 rounded border-gray-300 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                                </div>
+                            </td>
+                            <td class="p-3 w-4">
+                                <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewbox="0 0 20 20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </td>
+                            <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white flex items-center">
+                                <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="iMac Front Image" class="h-8 w-auto mr-3">
+                                Apple iMac 20&#34;
+                            </th>
+                            <td class="px-4 py-3">PC</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">$1499</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">1237</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">2000</td>
+                            <td class="px-4 py-3 whitespace-nowrap">
+                                <div class="w-fit bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-100 dark:text-green-800">Active</div>
+                            </td>
+                        </tr>
+                        <tr class="hidden flex-1 overflow-x-auto w-full" id="table-column-body-1" aria-labelledby="table-column-header-1">
+                            <td class="p-4 border-b dark:border-gray-700" colspan="9">
+                                <div class="grid grid-cols-4 gap-4 mb-4">
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="iMac Front Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png" alt="iMac Side Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image" class="h-full w-auto">
+                                    </div>
+                                </div>
+                                <div>
+                                    <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Details</h6>
+                                    <div class="text-base text-gray-500 dark:text-gray-400 max-w-screen-md">Standard glass, 3.8GHz 8-core 10th-generation Intel Core i7 processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4 memory, Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD storage, Gigabit Ethernet, Magic Mouse 2, Magic Keyboard - US.</div>
+                                </div>
+                                <div class="grid grid-cols-4 gap-4 mt-4">
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col items-start justify-between">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Product State</h6>
+                                        <div class="bg-primary-100 text-primary-800 text-xs font-medium px-2.5 py-0.5 rounded-md dark:bg-primary-200 dark:text-primary-800 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            New
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col justify-between">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Shipping</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                            </svg>
+                                            Worldwide
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Colors</h6>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="rounded-full h-6 w-6 bg-purple-600"></div>
+                                            <div class="rounded-full h-6 w-6 bg-indigo-400"></div>
+                                            <div class="rounded-full h-6 w-6 bg-primary-600"></div>
+                                            <div class="rounded-full h-6 w-6 bg-pink-400"></div>
+                                            <div class="rounded-full h-6 w-6 bg-teal-300"></div>
+                                            <div class="rounded-full h-6 w-6 bg-green-300"></div>
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Brand</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Apple</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Sold by</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Flowbite</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Ships from</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Flowbite</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Dimensions (cm)</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">105 x 15 x 23</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Item weight</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">12kg</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3 mt-4">
+                                    <button type="button" data-modal-target="updateProductModal" data-modal-toggle="updateProductModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                                            <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
+                                        </svg>
+                                        Edit
+                                    </button>
+                                    <button type="button" data-modal-target="readProductModal" data-modal-toggle="readProductModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Preview</button>
+                                    <button type="button" data-modal-target="deleteModal" data-modal-toggle="deleteModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 rounded-lg dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                        </svg>
+                                        Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer transition" id="table-column-header-2" data-accordion-target="#table-column-body-2" aria-expanded="false" aria-controls="table-column-body-2">
+                            <td class="px-4 py-3 w-4">
+                                <div class="flex items-center">
+                                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 text-primary-600 bg-gray-100 rounded border-gray-300 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                                </div>
+                            </td>
+                            <td class="p-3 w-4">
+                                <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewbox="0 0 20 20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </td>
+                            <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white flex items-center">
+                                <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="iMac Front Image" class="h-8 w-auto mr-3">
+                                Apple iPhone 14
+                            </th>
+                            <td class="px-4 py-3">Phone</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">$999</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">300</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">466</td>
+                            <td class="px-4 py-3 whitespace-nowrap">
+                                <div class="w-fit bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-100 dark:text-green-800">Active</div>
+                            </td>
+                        </tr>
+                        <tr class="hidden flex-1 overflow-x-auto w-full" id="table-column-body-2" aria-labelledby="table-column-header-2">
+                            <td class="p-4 border-b dark:border-gray-700" colspan="9">
+                                <div class="grid grid-cols-4 gap-4 mb-4">
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="iMac Front Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png" alt="iMac Side Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image" class="h-full w-auto">
+                                    </div>
+                                </div>
+                                <div>
+                                    <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Details</h6>
+                                    <div class="text-base text-gray-500 dark:text-gray-400 max-w-screen-md">Standard glass, 3.8GHz 8-core 10th-generation Intel Core i7 processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4 memory, Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD storage, Gigabit Ethernet, Magic Mouse 2, Magic Keyboard - US.</div>
+                                </div>
+                                <div class="grid grid-cols-4 gap-4 mt-4">
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col items-start justify-between">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Product State</h6>
+                                        <div class="bg-primary-100 text-primary-800 text-xs font-medium px-2.5 py-0.5 rounded-md dark:bg-primary-200 dark:text-primary-800 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            New
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col justify-between">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Shipping</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                            </svg>
+                                            Worldwide
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Colors</h6>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="rounded-full h-6 w-6 bg-purple-600"></div>
+                                            <div class="rounded-full h-6 w-6 bg-indigo-400"></div>
+                                            <div class="rounded-full h-6 w-6 bg-primary-600"></div>
+                                            <div class="rounded-full h-6 w-6 bg-pink-400"></div>
+                                            <div class="rounded-full h-6 w-6 bg-teal-300"></div>
+                                            <div class="rounded-full h-6 w-6 bg-green-300"></div>
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Brand</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Apple</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Sold by</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Flowbite</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Ships from</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Flowbite</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Dimensions (cm)</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">105 x 15 x 23</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Item weight</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">12kg</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3 mt-4">
+                                    <button type="button" data-modal-target="updateProductModal" data-modal-toggle="updateProductModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                                            <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
+                                        </svg>
+                                        Edit
+                                    </button>
+                                    <button type="button" data-modal-target="readProductModal" data-modal-toggle="readProductModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Preview</button>
+                                    <button type="button" data-modal-target="deleteModal" data-modal-toggle="deleteModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 rounded-lg dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                        </svg>
+                                        Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer transition" id="table-column-header-3" data-accordion-target="#table-column-body-3" aria-expanded="false" aria-controls="table-column-body-3">
+                            <td class="px-4 py-3 w-4">
+                                <div class="flex items-center">
+                                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 text-primary-600 bg-gray-100 rounded border-gray-300 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                                </div>
+                            </td>
+                            <td class="p-3 w-4">
+                                <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewbox="0 0 20 20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </td>
+                            <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white flex items-center">
+                                <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="iMac Front Image" class="h-8 w-auto mr-3">
+                                Apple iPad Air
+                            </th>
+                            <td class="px-4 py-3">Tablet</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">$1199</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">4576</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">90</td>
+                            <td class="px-4 py-3 whitespace-nowrap">
+                                <div class="w-fit bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-100 dark:text-green-800">Active</div>
+                            </td>
+                        </tr>
+                        <tr class="hidden flex-1 overflow-x-auto w-full" id="table-column-body-3" aria-labelledby="table-column-header-3">
+                            <td class="p-4 border-b dark:border-gray-700" colspan="9">
+                                <div class="grid grid-cols-4 gap-4 mb-4">
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="iMac Front Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png" alt="iMac Side Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image" class="h-full w-auto">
+                                    </div>
+                                </div>
+                                <div>
+                                    <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Details</h6>
+                                    <div class="text-base text-gray-500 dark:text-gray-400 max-w-screen-md">Standard glass, 3.8GHz 8-core 10th-generation Intel Core i7 processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4 memory, Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD storage, Gigabit Ethernet, Magic Mouse 2, Magic Keyboard - US.</div>
+                                </div>
+                                <div class="grid grid-cols-4 gap-4 mt-4">
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col items-start justify-between">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Product State</h6>
+                                        <div class="bg-primary-100 text-primary-800 text-xs font-medium px-2.5 py-0.5 rounded-md dark:bg-primary-200 dark:text-primary-800 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            New
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col justify-between">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Shipping</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                            </svg>
+                                            Worldwide
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Colors</h6>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="rounded-full h-6 w-6 bg-purple-600"></div>
+                                            <div class="rounded-full h-6 w-6 bg-indigo-400"></div>
+                                            <div class="rounded-full h-6 w-6 bg-primary-600"></div>
+                                            <div class="rounded-full h-6 w-6 bg-pink-400"></div>
+                                            <div class="rounded-full h-6 w-6 bg-teal-300"></div>
+                                            <div class="rounded-full h-6 w-6 bg-green-300"></div>
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Brand</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Apple</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Sold by</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Flowbite</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Ships from</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Flowbite</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Dimensions (cm)</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">105 x 15 x 23</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Item weight</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">12kg</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3 mt-4">
+                                    <button type="button" data-modal-target="updateProductModal" data-modal-toggle="updateProductModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                                            <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
+                                        </svg>
+                                        Edit
+                                    </button>
+                                    <button type="button" data-modal-target="readProductModal" data-modal-toggle="readProductModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Preview</button>
+                                    <button type="button" data-modal-target="deleteModal" data-modal-toggle="deleteModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 rounded-lg dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                        </svg>
+                                        Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer transition" id="table-column-header-4" data-accordion-target="#table-column-body-4" aria-expanded="false" aria-controls="table-column-body-4">
+                            <td class="px-4 py-3 w-4">
+                                <div class="flex items-center">
+                                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 text-primary-600 bg-gray-100 rounded border-gray-300 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                                </div>
+                            </td>
+                            <td class="p-3 w-4">
+                                <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewbox="0 0 20 20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </td>
+                            <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white flex items-center">
+                                <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="iMac Front Image" class="h-8 w-auto mr-3">
+                                Xbox Series S
+                            </th>
+                            <td class="px-4 py-3">Gaming/Console</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">Microsoft</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">$299</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">56</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">3087</td>
+                            <td class="px-4 py-3 whitespace-nowrap">
+                                <div class="w-fit bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-100 dark:text-green-800">Active</div>
+                            </td>
+                        </tr>
+                        <tr class="hidden flex-1 overflow-x-auto w-full" id="table-column-body-4" aria-labelledby="table-column-header-4">
+                            <td class="p-4 border-b dark:border-gray-700" colspan="9">
+                                <div class="grid grid-cols-4 gap-4 mb-4">
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="iMac Front Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png" alt="iMac Side Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image" class="h-full w-auto">
+                                    </div>
+                                </div>
+                                <div>
+                                    <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Details</h6>
+                                    <div class="text-base text-gray-500 dark:text-gray-400 max-w-screen-md">Standard glass, 3.8GHz 8-core 10th-generation Intel Core i7 processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4 memory, Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD storage, Gigabit Ethernet, Magic Mouse 2, Magic Keyboard - US.</div>
+                                </div>
+                                <div class="grid grid-cols-4 gap-4 mt-4">
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col items-start justify-between">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Product State</h6>
+                                        <div class="bg-primary-100 text-primary-800 text-xs font-medium px-2.5 py-0.5 rounded-md dark:bg-primary-200 dark:text-primary-800 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            New
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col justify-between">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Shipping</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                            </svg>
+                                            Worldwide
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Colors</h6>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="rounded-full h-6 w-6 bg-purple-600"></div>
+                                            <div class="rounded-full h-6 w-6 bg-indigo-400"></div>
+                                            <div class="rounded-full h-6 w-6 bg-primary-600"></div>
+                                            <div class="rounded-full h-6 w-6 bg-pink-400"></div>
+                                            <div class="rounded-full h-6 w-6 bg-teal-300"></div>
+                                            <div class="rounded-full h-6 w-6 bg-green-300"></div>
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Brand</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Apple</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Sold by</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Flowbite</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Ships from</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Flowbite</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Dimensions (cm)</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">105 x 15 x 23</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Item weight</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">12kg</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3 mt-4">
+                                    <button type="button" data-modal-target="updateProductModal" data-modal-toggle="updateProductModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                                            <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
+                                        </svg>
+                                        Edit
+                                    </button>
+                                    <button type="button" data-modal-target="readProductModal" data-modal-toggle="readProductModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Preview</button>
+                                    <button type="button" data-modal-target="deleteModal" data-modal-toggle="deleteModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 rounded-lg dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                        </svg>
+                                        Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer transition" id="table-column-header-5" data-accordion-target="#table-column-body-5" aria-expanded="false" aria-controls="table-column-body-5">
+                            <td class="px-4 py-3 w-4">
+                                <div class="flex items-center">
+                                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 text-primary-600 bg-gray-100 rounded border-gray-300 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                                </div>
+                            </td>
+                            <td class="p-3 w-4">
+                                <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewbox="0 0 20 20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </td>
+                            <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white flex items-center">
+                                <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="iMac Front Image" class="h-8 w-auto mr-3">
+                                PlayStation 5
+                            </th>
+                            <td class="px-4 py-3">Gaming/Console</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">Sony</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">$799</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">78</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">2999</td>
+                            <td class="px-4 py-3 whitespace-nowrap">
+                                <div class="w-fit bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-100 dark:text-green-800">Active</div>
+                            </td>
+                        </tr>
+                        <tr class="hidden flex-1 overflow-x-auto w-full" id="table-column-body-5" aria-labelledby="table-column-header-5">
+                            <td class="p-4 border-b dark:border-gray-700" colspan="9">
+                                <div class="grid grid-cols-4 gap-4 mb-4">
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="iMac Front Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png" alt="iMac Side Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image" class="h-full w-auto">
+                                    </div>
+                                </div>
+                                <div>
+                                    <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Details</h6>
+                                    <div class="text-base text-gray-500 dark:text-gray-400 max-w-screen-md">Standard glass, 3.8GHz 8-core 10th-generation Intel Core i7 processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4 memory, Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD storage, Gigabit Ethernet, Magic Mouse 2, Magic Keyboard - US.</div>
+                                </div>
+                                <div class="grid grid-cols-4 gap-4 mt-4">
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col items-start justify-between">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Product State</h6>
+                                        <div class="bg-primary-100 text-primary-800 text-xs font-medium px-2.5 py-0.5 rounded-md dark:bg-primary-200 dark:text-primary-800 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            New
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col justify-between">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Shipping</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                            </svg>
+                                            Worldwide
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Colors</h6>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="rounded-full h-6 w-6 bg-purple-600"></div>
+                                            <div class="rounded-full h-6 w-6 bg-indigo-400"></div>
+                                            <div class="rounded-full h-6 w-6 bg-primary-600"></div>
+                                            <div class="rounded-full h-6 w-6 bg-pink-400"></div>
+                                            <div class="rounded-full h-6 w-6 bg-teal-300"></div>
+                                            <div class="rounded-full h-6 w-6 bg-green-300"></div>
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Brand</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Apple</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Sold by</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Flowbite</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Ships from</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Flowbite</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Dimensions (cm)</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">105 x 15 x 23</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Item weight</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">12kg</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3 mt-4">
+                                    <button type="button" data-modal-target="updateProductModal" data-modal-toggle="updateProductModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                                            <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
+                                        </svg>
+                                        Edit
+                                    </button>
+                                    <button type="button" data-modal-target="readProductModal" data-modal-toggle="readProductModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Preview</button>
+                                    <button type="button" data-modal-target="deleteModal" data-modal-toggle="deleteModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 rounded-lg dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                        </svg>
+                                        Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer transition" id="table-column-header-6" data-accordion-target="#table-column-body-6" aria-expanded="false" aria-controls="table-column-body-6">
+                            <td class="px-4 py-3 w-4">
+                                <div class="flex items-center">
+                                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 text-primary-600 bg-gray-100 rounded border-gray-300 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                                </div>
+                            </td>
+                            <td class="p-3 w-4">
+                                <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewbox="0 0 20 20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </td>
+                            <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white flex items-center">
+                                <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="iMac Front Image" class="h-8 w-auto mr-3">
+                                Xbox Series X
+                            </th>
+                            <td class="px-4 py-3">Gaming/Console</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">Microsoft</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">$699</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">200</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">1870</td>
+                            <td class="px-4 py-3 whitespace-nowrap">
+                                <div class="w-fit bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-100 dark:text-green-800">Active</div>
+                            </td>
+                        </tr>
+                        <tr class="hidden flex-1 overflow-x-auto w-full" id="table-column-body-6" aria-labelledby="table-column-header-6">
+                            <td class="p-4 border-b dark:border-gray-700" colspan="9">
+                                <div class="grid grid-cols-4 gap-4 mb-4">
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="iMac Front Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png" alt="iMac Side Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image" class="h-full w-auto">
+                                    </div>
+                                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+                                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image" class="h-full w-auto">
+                                    </div>
+                                </div>
+                                <div>
+                                    <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Details</h6>
+                                    <div class="text-base text-gray-500 dark:text-gray-400 max-w-screen-md">Standard glass, 3.8GHz 8-core 10th-generation Intel Core i7 processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4 memory, Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD storage, Gigabit Ethernet, Magic Mouse 2, Magic Keyboard - US.</div>
+                                </div>
+                                <div class="grid grid-cols-4 gap-4 mt-4">
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col items-start justify-between">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Product State</h6>
+                                        <div class="bg-primary-100 text-primary-800 text-xs font-medium px-2.5 py-0.5 rounded-md dark:bg-primary-200 dark:text-primary-800 flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            New
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col justify-between">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Shipping</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                            </svg>
+                                            Worldwide
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Colors</h6>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="rounded-full h-6 w-6 bg-purple-600"></div>
+                                            <div class="rounded-full h-6 w-6 bg-indigo-400"></div>
+                                            <div class="rounded-full h-6 w-6 bg-primary-600"></div>
+                                            <div class="rounded-full h-6 w-6 bg-pink-400"></div>
+                                            <div class="rounded-full h-6 w-6 bg-teal-300"></div>
+                                            <div class="rounded-full h-6 w-6 bg-green-300"></div>
+                                        </div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Brand</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Apple</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Sold by</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Flowbite</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Ships from</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">Flowbite</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Dimensions (cm)</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">105 x 15 x 23</div>
+                                    </div>
+                                    <div class="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <h6 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">Item weight</h6>
+                                        <div class="flex items-center text-gray-500 dark:text-gray-400">12kg</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3 mt-4">
+                                    <button type="button" data-modal-target="updateProductModal" data-modal-toggle="updateProductModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                                            <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
+                                        </svg>
+                                        Edit
+                                    </button>
+                                    <button type="button" data-modal-target="readProductModal" data-modal-toggle="readProductModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Preview</button>
+                                    <button type="button" data-modal-target="deleteModal" data-modal-toggle="deleteModal" class="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 rounded-lg dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                        </svg>
+                                        Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-3 md:space-y-0 px-4 pt-3 pb-4" aria-label="Table navigation">
+                <div class="text-xs flex items-center space-x-5">
+                    <div>
+                        <div class="text-gray-500 dark:text-gray-400 mb-1">Purchase price</div>
+                        <div class="dark:text-white font-medium">$ 3,567,890</div>
+                    </div>
+                    <div>
+                        <div class="text-gray-500 dark:text-gray-400 mb-1">Total selling price</div>
+                        <div class="dark:text-white font-medium">$ 8,489,400</div>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button type="button" class="py-1.5 flex items-center text-sm font-medium text-center text-primary-700 rounded-lg hover:text-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:text-primary-500 dark:hover:text-primary-600 dark:focus:ring-primary-800">Print barcodes</button>
+                    <button type="button" class="py-1.5 flex items-center text-sm font-medium text-center text-primary-700 rounded-lg hover:text-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:text-primary-500 dark:hover:text-primary-600 dark:focus:ring-primary-800">Duplicate</button>
+                    <button type="button" class="py-2 px-3 flex items-center text-xs font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Export CSV</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End block -->
+<!-- Create Product Modal -->
+<div id="createProductModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full flex items-center">
+    <div class="relative p-4 w-full max-w-3xl h-full md:h-auto max-h-full">
+        <!-- Modal content -->
+        <div class="relative p-4 bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
+            <!-- Modal header -->
+            <div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5 dark:border-gray-600">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Add Product</h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="createProductModal">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <form action="#">
+                <div class="grid gap-4 mb-4 sm:grid-cols-2">
+                    <div>
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product Name</label>
+                        <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name" required="">
+                    </div>
+                    <div><label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label><select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"><option selected="">Select category</option><option value="TV">TV/Monitors</option><option value="PC">PC</option><option value="GA">Gaming/Console</option><option value="PH">Phones</option></select></div>
+                    <div>
+                        <label for="brand" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Brand</label>
+                        <input type="text" name="brand" id="brand" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Product brand" required="">
+                    </div>
+                    <div>
+                        <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price</label>
+                        <input type="number" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="$2999" required="">
+                    </div>
+                    <div class="grid gap-4 sm:col-span-2 md:gap-6 sm:grid-cols-4">
+                        <div>
+                            <label for="weight" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Item weight (kg)</label>
+                            <input type="number" name="weight" id="weight" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="12" required="">
+                        </div>
+                        <div>
+                            <label for="length" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Lenght (cm)</label>
+                            <input type="number" name="length" id="length" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="105" required="">
+                        </div>
+                        <div>
+                            <label for="breadth" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Breadth (cm)</label>
+                            <input type="number" name="breadth" id="breadth" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="15" required="">
+                        </div>
+                        <div>
+                            <label for="width" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Width (cm)</label>
+                            <input type="number" name="width" id="width" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="23" required="">
+                        </div>
+                    </div>
+                    <div class="sm:col-span-2"><label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label><textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Write product description here"></textarea></div>
+                </div>
+                <div class="mb-4 space-y-4 sm:flex sm:space-y-0">
+                    <div class="flex items-center mr-4">
+                        <input id="inline-checkbox" type="checkbox" value="" name="sellingType" class="w-4 h-4 bg-gray-100 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="inline-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">In-store only</label>
+                    </div>
+                    <div class="flex items-center mr-4">
+                        <input id="inline-2-checkbox" type="checkbox" value="" name="sellingType" class="w-4 h-4 bg-gray-100 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="inline-2-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Online selling only</label>
+                    </div>
+                    <div class="flex items-center mr-4">
+                        <input checked="" id="inline-checked-checkbox" type="checkbox" value="" name="sellingType" class="w-4 h-4 bg-gray-100 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="inline-checked-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Both in-store and online</label>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <span class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product Images</span>
+                    <div class="flex justify-center items-center w-full">
+                        <label for="dropzone-file" class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                            <div class="flex flex-col justify-center items-center pt-5 pb-6">
+                                <svg aria-hidden="true" class="mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                </svg>
+                                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                                    <span class="font-semibold">Click to upload</span>
+                                    or drag and drop
+                                </p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                            </div>
+                            <input id="dropzone-file" type="file" class="hidden">
+                        </label>
+                    </div>
+                </div>
+                <div class="items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+                    <button type="submit" class="w-full sm:w-auto justify-center text-white inline-flex bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Add product</button>
+                    <button class="w-full sm:w-auto text-white justify-center inline-flex items-center bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                        <svg class="mr-1 -ml-1 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                        </svg>
+                        Schedule
+                    </button>
+                    <button data-modal-toggle="createProductModal" type="button" class="w-full justify-center sm:w-auto text-gray-500 inline-flex items-center bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
+                        <svg class="mr-1 -ml-1 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                        Discard
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Update Modal -->
+<div id="updateProductModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-3xl h-full md:h-auto max-h-full">
+        <!-- Modal content -->
+        <div class="relative p-4 bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
+            <!-- Modal header -->
+            <div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5 dark:border-gray-600">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Update Product</h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="updateProductModal">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <form action="#">
+                <div class="grid gap-4 mb-4 sm:grid-cols-2">
+                    <div>
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product Name</label>
+                        <input type="text" name="name" id="name" value="Apple iPad 5th Gen Wi-Fi" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ex. Apple iMac 27&ldquo;" required="">
+                    </div>
+                    <div><label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label><select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"><option selected="">Electronics</option><option value="TV">TV/Monitors</option><option value="PC">PC</option><option value="GA">Gaming/Console</option><option value="PH">Phones</option></select></div>
+                    <div>
+                        <label for="brand" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Brand</label>
+                        <input type="text" name="brand" id="brand" value="Tesla" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ex. Apple" required="">
+                    </div>
+                    <div>
+                        <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price</label>
+                        <input type="number" name="price" id="price" value="259" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="$2999" required="">
+                    </div>
+                    <div class="grid gap-4 sm:col-span-2 md:gap-6 sm:grid-cols-4">
+                        <div>
+                            <label for="weight" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Item weight (kg)</label>
+                            <input type="number" name="weight" id="weight" value="32" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ex. 12" required="">
+                        </div>
+                        <div>
+                            <label for="length" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Lenght (cm)</label>
+                            <input type="number" name="length" id="length" value="126" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ex. 105" required="">
+                        </div>
+                        <div>
+                            <label for="breadth" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Breadth (cm)</label>
+                            <input type="number" name="breadth" id="breadth" value="121" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ex. 15" required="">
+                        </div>
+                        <div>
+                            <label for="width" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Width (cm)</label>
+                            <input type="number" name="width" id="width" value="953" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ex. 23" required="">
+                        </div>
+                    </div>
+                    <div class="sm:col-span-2"><label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label><textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Write your description...">Standard glass, 3.8GHz 8-core 10th-generation Intel Core i7 processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4 memory, Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD storage, Gigabit Ethernet, Magic Mouse 2, Magic Keyboard - US</textarea></div>
+                </div>
+                <div class="mb-4 space-y-4 sm:flex sm:space-y-0">
+                    <div class="flex items-center mr-4">
+                        <input id="inline-checkbox" type="checkbox" value="" name="sellingType" class="w-4 h-4 bg-gray-100 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="inline-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">In-store only</label>
+                    </div>
+                    <div class="flex items-center mr-4">
+                        <input id="inline-2-checkbox" type="checkbox" value="" name="sellingType" class="w-4 h-4 bg-gray-100 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="inline-2-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Online selling only</label>
+                    </div>
+                    <div class="flex items-center mr-4">
+                        <input checked="" id="inline-checked-checkbox" type="checkbox" value="" name="sellingType" class="w-4 h-4 bg-gray-100 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="inline-checked-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Both in-store and online</label>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <span class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product Images</span>
+                    <div class="grid grid-cols-3 gap-4 mb-4 sm:grid-cols-4">
+                        <div class="relative p-2 bg-gray-100 rounded-lg sm:w-36 sm:h-36 dark:bg-gray-700">
+                            <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png" alt="iMac Side Image">
+                            <button type="button" class="absolute bottom-1 left-1 text-red-600 dark:text-red-500 hover:text-red-500 dark:hover:text-red-400">
+                                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="sr-only">Delete image</span>
+                            </button>
+                        </div>
+                        <div class="relative p-2 bg-gray-100 rounded-lg sm:w-36 sm:h-36 dark:bg-gray-700">
+                            <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="iMac Front Image">
+                            <button type="button" class="absolute bottom-1 left-1 text-red-600 dark:text-red-500 hover:text-red-500 dark:hover:text-red-400">
+                                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="sr-only">Delete image</span>
+                            </button>
+                        </div>
+                        <div class="relative p-2 bg-gray-100 rounded-lg sm:w-36 sm:h-36 dark:bg-gray-700">
+                            <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image">
+                            <button type="button" class="absolute bottom-1 left-1 text-red-600 dark:text-red-500 hover:text-red-500 dark:hover:text-red-400">
+                                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="sr-only">Delete image</span>
+                            </button>
+                        </div>
+                        <div class="relative p-2 bg-gray-100 rounded-lg sm:w-36 sm:h-36 dark:bg-gray-700">
+                            <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image">
+                            <button type="button" class="absolute bottom-1 left-1 text-red-600 dark:text-red-500 hover:text-red-500 dark:hover:text-red-400">
+                                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="sr-only">Delete image</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center w-full">
+                        <label for="dropzone-file" class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                            <div class="flex flex-col justify-center items-center pt-5 pb-6">
+                                <svg aria-hidden="true" class="mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                </svg>
+                                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                                    <span class="font-semibold">Click to upload</span>
+                                    or drag and drop
+                                </p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                            </div>
+                            <input id="dropzone-file" type="file" class="hidden">
+                        </label>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button type="submit" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Update product</button>
+                    <button type="button" class="text-red-600 inline-flex items-center hover:text-white border border-red-600 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                        <svg aria-hidden="true" class="mr-1 -ml-1 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                        </svg>
+                        Delete
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Preview Modal -->
+<div id="readProductModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-3xl h-full md:h-auto max-h-full">
+        <!-- Modal content -->
+        <div class="relative p-4 bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
+            <!-- Modal header -->
+            <div class="flex justify-between mb-4 rounded-t sm:mb-5">
+                <div class="text-lg text-gray-900 md:text-xl dark:text-white">
+                    <h3 class="font-semibold ">Apple iMac 27”</h3>
+                    <p class="font-bold">$2999</p>
+                </div>
+                <div>
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 inline-flex dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="readProductModal">
+                        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 gap-4 mb-4 sm:grid-cols-4 sm:mb-5">
+                <div class="p-2 bg-gray-100 rounded-lg md:w-36 md:h-36 dark:bg-gray-700">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png" alt="iMac Side Image">
+                </div>
+                <div class="p-2 bg-gray-100 rounded-lg md:w-36 md:h-36 dark:bg-gray-700">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="iMac Front Image">
+                </div>
+                <div class="p-2 bg-gray-100 rounded-lg md:w-36 md:h-36 dark:bg-gray-700">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image">
+                </div>
+                <div class="p-2 bg-gray-100 rounded-lg md:w-36 md:h-36 dark:bg-gray-700">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image">
+                </div>
+            </div>
+            <dl class="sm:mb-5">
+                <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Details</dt><dd class="mb-4 font-light text-gray-500 sm:mb-5 dark:text-gray-400">Standard glass ,3.8GHz 8-core 10th-generation Intel Core i7 processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4 memory, Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD storage, Gigabit Ethernet, Magic Mouse 2, Magic Keyboard - US.</dd><dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Colors</dt>
+                <dd class="flex items-center mb-4 space-x-2 font-light text-gray-500 dark:text-gray-400">
+                    <div class="w-6 h-6 bg-purple-600 rounded-full"></div>
+                    <div class="w-6 h-6 bg-indigo-400 rounded-full"></div>
+                    <div class="w-6 h-6 rounded-full bg-primary-600"></div>
+                    <div class="w-6 h-6 bg-pink-400 rounded-full"></div>
+                    <div class="w-6 h-6 bg-teal-300 rounded-full"></div>
+                    <div class="w-6 h-6 bg-green-300 rounded-full"></div>
+                </dd>
+            </dl>
+            <dl class="grid grid-cols-2 gap-4 mb-4 sm:grid-cols-3 sm:mb-5">
+                <div class="p-3 bg-gray-100 rounded-lg dark:bg-gray-700"><dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Sold by</dt><dd class="text-gray-500 dark:text-gray-400">Flowbite</dd></div>
+                <div class="p-3 bg-gray-100 rounded-lg dark:bg-gray-700"><dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Ships from</dt><dd class="text-gray-500 dark:text-gray-400">Flowbite</dd></div>
+                <div class="p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                    <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Product State</dt>
+                    <dd class="text-gray-500 dark:text-gray-400">
+                        <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+                            <svg aria-hidden="true" class="mr-1 w-3 h-3" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            New
+                        </span>
+                    </dd>
+                </div>
+                <div class="p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+                    <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Shipping</dt>
+                    <dd class="flex items-center text-gray-500 dark:text-gray-400">
+                        <svg class="w-4 h-4 mr-1.5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                        </svg>
+                        Worldwide
+                    </dd>
+                </div>
+                <div class="p-3 bg-gray-100 rounded-lg dark:bg-gray-700"><dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Dimensions (cm)</dt><dd class="text-gray-500 dark:text-gray-400">105 x 15 x 23</dd></div>
+                <div class="p-3 bg-gray-100 rounded-lg dark:bg-gray-700"><dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Item weight</dt><dd class="text-gray-500 dark:text-gray-400">12kg</dd></div>
+            </dl>
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3 sm:space-x-4">
+                    <button type="button" class="text-white inline-flex items-center bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                        <svg aria-hidden="true" class="mr-1 -ml-1 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                            <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
+                        </svg>
+                        Edit
+                    </button>
+                    <button type="button" class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Preview</button>
+                </div>
+                <button type="button" class="inline-flex items-center text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-500 dark:hover:bg-red-600 dark:focus:ring-red-900">
+                    <svg aria-hidden="true" class="w-5 h-5 mr-1.5 -ml-1" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                    </svg>
+                    Delete
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Delete Confirm -->
+<div id="deleteModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-md h-full md:h-auto max-h-full">
+        <!-- Modal content -->
+        <div class="relative p-4 text-center bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
+            <button type="button" class="text-gray-400 absolute top-2.5 right-2.5 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="deleteModal">
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+            <svg class="text-gray-400 dark:text-gray-500 w-11 h-11 mb-3.5 mx-auto" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+            </svg>
+            <p class="mb-4 text-gray-500 dark:text-gray-300">Are you sure you want to delete this item?</p>
+            <div class="flex justify-center items-center space-x-4">
+                <button data-modal-toggle="deleteModal" type="button" class="py-2 px-3 text-sm font-medium text-gray-500 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No, cancel</button>
+                <button type="submit" class="py-2 px-3 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-500 dark:hover:bg-red-600 dark:focus:ring-red-900">Yes, I'm sure</button>
+            </div>
+        </div>
+    </div>
+</div>

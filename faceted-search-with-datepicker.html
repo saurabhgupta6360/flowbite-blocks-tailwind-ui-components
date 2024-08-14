@@ -1,0 +1,239 @@
+<!-- Modal toggle -->
+<div class="flex justify-center m-5">
+    <button
+        class="block text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+        type="button" data-modal-target="defaultModal" data-modal-toggle="defaultModal">
+        Toggle modal
+    </button>
+</div>
+
+<!-- Main modal -->
+<form action="#" method="get" id="defaultModal" tabindex="-1" aria-hidden="true"
+    class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+    <div class="relative w-full h-full max-w-md md:h-auto">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-800">
+            <!-- Modal header -->
+            <div class="flex items-start justify-between px-6 py-4 rounded-t">
+                <h3 class="text-lg font-normal text-gray-500 dark:text-gray-400">
+                    Filter by date
+                </h3>
+                <button type="button"
+                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                    data-modal-toggle="defaultModal">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="px-4 space-y-4 md:px-6">
+
+                <!-- Date -->
+                <div>
+                    <label for="start" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Date
+                    </label>
+
+                    <div date-rangepicker class="flex items-center w-full">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                    fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <input name="start" type="text" id="start"
+                                class="bg-gray-50 z-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                placeholder="Select start date">
+                        </div>
+                        <span class="mx-4 text-gray-500">to</span>
+                        <div class="relative">
+                            <div
+                                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                    fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <input name="end" type="text"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                placeholder="Select end date">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Duration -->
+                <div>
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Duration
+                    </label>
+                    <ul class="grid w-full grid-cols-3 gap-3">
+                        <li>
+                            <input type="checkbox" id="hours-1" value="" class="hidden peer" name="duration">
+                            <label for="hours-1"
+                                class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-white border-2 rounded-lg cursor-pointer text-primary-600 border-primary-600 dark:hover:text-white dark:border-primary-500 dark:peer-checked:border-primary-500 peer-checked:border-primary-600 peer-checked:bg-primary-600 hover:text-white peer-checked:text-white hover:bg-primary-500 dark:text-primary-500 dark:bg-gray-800 dark:hover:bg-primary-600 dark:hover:border-primary-600 dark:peer-checked:bg-primary-500">
+                                1 hour
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="hours-2" value="" class="hidden peer" name="duration">
+                            <label for="hours-2"
+                                class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-white border-2 rounded-lg cursor-pointer text-primary-600 border-primary-600 dark:hover:text-white dark:border-primary-500 dark:peer-checked:border-primary-500 peer-checked:border-primary-600 peer-checked:bg-primary-600 hover:text-white peer-checked:text-white hover:bg-primary-500 dark:text-primary-500 dark:bg-gray-800 dark:hover:bg-primary-600 dark:hover:border-primary-600 dark:peer-checked:bg-primary-500">
+                                <div class="block">
+                                    <div class="w-full text-sm">2 hours</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="hours-3" value="" class="hidden peer" name="duration" checked>
+                            <label for="hours-3"
+                                class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-white border-2 rounded-lg cursor-pointer text-primary-600 border-primary-600 dark:hover:text-white dark:border-primary-500 dark:peer-checked:border-primary-500 peer-checked:border-primary-600 peer-checked:bg-primary-600 hover:text-white peer-checked:text-white hover:bg-primary-500 dark:text-primary-500 dark:bg-gray-800 dark:hover:bg-primary-600 dark:hover:border-primary-600 dark:peer-checked:bg-primary-500">
+                                <div class="block">
+                                    <div class="w-full text-sm">3 hours</div>
+                                </div>
+                            </label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="hours-4" value="" class="hidden peer" name="duration">
+                            <label for="hours-4"
+                                class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-white border-2 rounded-lg cursor-pointer text-primary-600 border-primary-600 dark:hover:text-white dark:border-primary-500 dark:peer-checked:border-primary-500 peer-checked:border-primary-600 peer-checked:bg-primary-600 hover:text-white peer-checked:text-white hover:bg-primary-500 dark:text-primary-500 dark:bg-gray-800 dark:hover:bg-primary-600 dark:hover:border-primary-600 dark:peer-checked:bg-primary-500">
+                                <div class="block">
+                                    <div class="w-full text-sm">4 hours</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="hours-57" value="" class="hidden peer" name="duration" checked>
+                            <label for="hours-57"
+                                class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-white border-2 rounded-lg cursor-pointer text-primary-600 border-primary-600 dark:hover:text-white dark:border-primary-500 dark:peer-checked:border-primary-500 peer-checked:border-primary-600 peer-checked:bg-primary-600 hover:text-white peer-checked:text-white hover:bg-primary-500 dark:text-primary-500 dark:bg-gray-800 dark:hover:bg-primary-600 dark:hover:border-primary-600 dark:peer-checked:bg-primary-500">
+                                <div class="block">
+                                    <div class="w-full text-sm">5-7 hours</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="hours-all" value="" class="hidden peer" name="duration">
+                            <label for="hours-all"
+                                class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-white border-2 rounded-lg cursor-pointer text-primary-600 border-primary-600 dark:hover:text-white dark:border-primary-500 dark:peer-checked:border-primary-500 peer-checked:border-primary-600 peer-checked:bg-primary-600 hover:text-white peer-checked:text-white hover:bg-primary-500 dark:text-primary-500 dark:bg-gray-800 dark:hover:bg-primary-600 dark:hover:border-primary-600 dark:peer-checked:bg-primary-500">
+                                <div class="block">
+                                    <div class="w-full text-sm">All day</div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+
+                    <label class="relative inline-flex items-center mt-4 cursor-pointer">
+                        <input type="checkbox" value="" class="sr-only peer" name="google_meet">
+                        <div
+                            class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-primary-300 dark:peer-focus:ring-primary-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary-600">
+                        </div>
+                        <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+                            Google Meet
+                        </span>
+                    </label>
+                </div>
+
+
+                <!-- Event type -->
+                <div>
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Event type
+                    </label>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <input id="industry-conferences" type="checkbox" value=""
+                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+
+                            <label for="industry-conferences"
+                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                Industry Conferences
+                            </label>
+                        </div>
+
+                        <div class="flex items-center">
+                            <input id="webinars" type="checkbox" value=""
+                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+
+                            <label for="webinars"
+                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                Webinars
+                            </label>
+                        </div>
+
+                        <div class="flex items-center">
+                            <input id="sales-kick-offs" type="checkbox" value="" checked
+                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+
+                            <label for="sales-kick-offs"
+                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                Sales Kick-Offs
+                            </label>
+                        </div>
+
+                        <div class="flex items-center">
+                            <input id="user-conferences" type="checkbox" value=""
+                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+
+                            <label for="user-conferences"
+                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                User Conferences
+                            </label>
+                        </div>
+
+                        <div class="flex items-center">
+                            <input id="private-events" type="checkbox" value="" checked
+                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+
+                            <label for="private-events"
+                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                Private Events
+                            </label>
+                        </div>
+
+                        <div class="flex items-center">
+                            <input id="field-marketing-events" type="checkbox" value=""
+                                class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+
+                            <label for="field-marketing-events"
+                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                Field Marketing Events
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex items-center p-6 space-x-4 rounded-b dark:border-gray-600">
+                <button type="submit"
+                    class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-700 dark:hover:bg-primary-800 dark:focus:ring-primary-800">
+                    Apply filters
+                </button>
+                <button type="reset"
+                    class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                    Reset
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+<!-- End modal -->
+ <script>
+    window.addEventListener("load", function () {
+  document.querySelector('[data-modal-toggle="defaultModal"]').click();
+});
+</script>
+
+<script src="https://unpkg.com/flowbite@2.2.1/dist/datepicker.min.js"></script>

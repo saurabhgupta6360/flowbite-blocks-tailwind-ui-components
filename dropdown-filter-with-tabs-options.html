@@ -1,0 +1,195 @@
+<div class="flex items-center justify-center p-4">
+  <button id="dropdownDefault" data-dropdown-toggle="dropdown"
+    class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+    type="button">
+    Filter with tabs
+    <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <!-- Dropdown menu -->
+  <div id="dropdown" class="z-10 hidden p-3 bg-white rounded-lg shadow w-72 dark:bg-gray-700">
+    <div class="mb-4 border-b border-gray-200 dark:border-gray-600">
+      <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent"
+        role="tablist">
+        <li class="mr-1" role="presentation">
+          <button class="inline-block pb-2 pr-1" id="price-tab" data-tabs-target="#price" type="button" role="tab"
+            aria-controls="price" aria-selected="false">
+            Price
+          </button>
+        </li>
+        <li class="mr-1" role="presentation">
+          <button class="inline-block pb-2 pr-1" id="shipping-tab" data-tabs-target="#shipping" type="button"
+            role="tab" aria-controls="shipping" aria-selected="false">
+            Shipping
+          </button>
+        </li>
+        <li class="mr-1" role="presentation">
+          <button class="inline-block pb-2 pr-1" id="brand-tab" data-tabs-target="#brand" type="button" role="tab"
+            aria-controls="brand" aria-selected="false">
+            Brands
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div id="myTabContent">
+      <div class="grid grid-cols-2 gap-4" id="price" role="tabpanel" aria-labelledby="price-tab">
+        <div class="flex items-center justify-between col-span-2 space-x-3">
+          <div class="w-full">
+            <label for="min-experience-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              From
+            </label>
+
+            <input type="number" id="price-from" value="300" min="1" max="10000"
+              class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+              placeholder="" required />
+          </div>
+
+          <div class="w-full">
+            <label for="price-to" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              To
+            </label>
+
+            <input type="number" id="max-experience-input" value="3500" min="1" max="10000"
+              class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+              placeholder="" required />
+          </div>
+        </div>
+      </div>
+      <div class="space-y-2" id="shipping" role="tabpanel" aria-labelledby="shipping-tab">
+        <div class="flex items-center">
+          <input id="worldwide" type="checkbox" value=""
+            class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+
+          <label for="worldwide" class="ml-2 text-sm font-medium text-gray-900 dark:text-white">
+            Worldwide
+          </label>
+        </div>
+        <div class="flex items-center">
+          <input id="america" type="checkbox" value="" checked
+            class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+
+          <label for="america" class="ml-2 text-sm font-medium text-gray-900 dark:text-white">
+            America
+          </label>
+        </div>
+        <div class="flex items-center">
+          <input id="europe" type="checkbox" value=""
+            class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+
+          <label for="europe" class="ml-2 text-sm font-medium text-gray-900 dark:text-white">
+            Europe
+          </label>
+        </div>
+        <div class="flex items-center">
+          <input id="asia" type="checkbox" value="" checked
+            class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+
+          <label for="asia" class="ml-2 text-sm font-medium text-gray-900 dark:text-white">
+            Asia
+          </label>
+        </div>
+        <div class="flex items-center">
+          <input id="australia-oceania" type="checkbox" value=""
+            class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+
+          <label for="australia-oceania" class="ml-2 text-sm font-medium text-gray-900 dark:text-white">
+            Australia/Oceania
+          </label>
+        </div>
+      </div>
+      <div id="brand" role="tabpanel" aria-labelledby="brand-tab">
+        <ul class="space-y-2 text-sm">
+          <li class="flex items-center">
+            <input id="apple" type="checkbox" value=""
+              class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+
+            <label for="apple" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+              Apple (56)
+            </label>
+          </li>
+
+          <li class="flex items-center">
+            <input id="dell" type="checkbox" value=""
+              class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+
+            <label for="dell" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+              Dell (56)
+            </label>
+          </li>
+
+          <li class="flex items-center">
+            <input id="asus" type="checkbox" value="" checked
+              class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+
+            <label for="asus" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+              Asus (97)
+            </label>
+          </li>
+
+          <li class="flex items-center">
+            <input id="logitech" type="checkbox" value=""
+              class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+
+            <label for="logitech" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+              Logitech (97)
+            </label>
+          </li>
+
+          <li class="flex items-center">
+            <input id="msi" type="checkbox" value="" checked
+              class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+
+            <label for="msi" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+              MSI (97)
+            </label>
+          </li>
+
+          <li class="flex items-center">
+            <input id="sony" type="checkbox" value=""
+              class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+
+            <label for="sony" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+              Sony (234)
+            </label>
+          </li>
+
+          <li class="flex items-center">
+            <input id="canon" type="checkbox" value=""
+              class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+
+            <label for="canon" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+              Canon (49)
+            </label>
+          </li>
+
+          <li class="flex items-center">
+            <input id="microsoft" type="checkbox" value="" checked
+              class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+
+            <label for="microsoft" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+              Microsoft (45)
+            </label>
+          </li>
+
+          <li class="flex items-center">
+            <input id="razor" type="checkbox" value=""
+              class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+
+            <label for="razor" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+              Razor (49)
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+window.addEventListener("load", function(event) {
+  document.querySelector('[data-dropdown-toggle="dropdown"]').click();
+});
+</script>

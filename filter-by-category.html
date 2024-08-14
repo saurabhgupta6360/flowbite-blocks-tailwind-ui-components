@@ -1,0 +1,139 @@
+<div class="flex justify-center items-center p-4">
+  <button id="dropdownDefault" data-dropdown-toggle="dropdown"
+    class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+    type="button">
+    Filter by categories
+    <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <!-- Dropdown menu -->
+  <div id="dropdown" class="z-10 hidden p-3 bg-white rounded-lg shadow w-72 dark:bg-gray-700">
+    <h6 class="mb-2 text-sm font-medium text-gray-900 dark:text-white">Columns</h6>
+    <ul class="space-y-2 text-sm" aria-labelledby="dropdownDefault">
+      <li>
+        <label
+          class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+          <input type="checkbox" value=""
+            class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+          Intent
+        </label>
+      </li>
+
+      <li>
+        <label
+          class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+          <input type="checkbox" value=""
+            class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+          SERP
+        </label>
+      </li>
+
+      <li>
+        <label
+          class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+          <input type="checkbox" value=""
+            class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+          SERP features
+        </label>
+      </li>
+
+      <li>
+        <label
+          class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+          <input type="checkbox" value=""
+            class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+          Position on the start date
+        </label>
+      </li>
+
+      <li>
+        <label
+          class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+          <input type="checkbox" value="" checked
+            class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+          Volume
+        </label>
+      </li>
+
+      <li>
+        <label
+          class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+          <input type="checkbox" value=""
+            class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+          CPC
+        </label>
+      </li>
+    </ul>
+
+    <h6 class="mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">
+      Additional settings
+    </h6>
+    <ul class="space-y-2 text-sm" aria-labelledby="dropdownDefault">
+      <li>
+        <label
+          class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+          <input type="checkbox" value="" checked
+            class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+          Show tags in keywords
+        </label>
+      </li>
+
+      <li>
+        <label
+          class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+          <input type="checkbox" value="" checked
+            class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+          Show SERP feature icons
+        </label>
+      </li>
+    </ul>
+
+    <h6 class="mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">
+      Positions Chart
+    </h6>
+    <ul class="space-y-2 text-sm" aria-labelledby="dropdownDefault">
+      <li>
+        <label
+          class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+          <input type="checkbox" value=""
+            class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+          Smart zoom
+        </label>
+      </li>
+    </ul>
+
+    <h6 class="mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">Row height</h6>
+    <ul class="space-y-2 text-sm" aria-labelledby="dropdownDefault">
+      <li>
+        <label
+          class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+          <input type="radio" value="" name="row-height" checked
+            class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded-full text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+          Show tags in keywords
+        </label>
+      </li>
+
+      <li>
+        <label
+          class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
+          <input type="radio" value="" name="row-height"
+            class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded-full text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+          Show SERP feature icons
+        </label>
+      </li>
+    </ul>
+
+    <a href="#"
+      class="flex items-center text-sm font-medium text-primary-600 dark:text-primary-500 hover:underline mt-4 ml-1.5">
+      Apply to all projects
+    </a>
+  </div>
+</div>
+
+<script>
+  window.addEventListener("load", function(event) {
+  document.querySelector('[data-dropdown-toggle="dropdown"]').click();
+});
+</script>
