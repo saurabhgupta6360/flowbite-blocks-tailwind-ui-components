@@ -1,0 +1,172 @@
+<div class="m-5 text-center">
+  <button id="warrantiesButton" class="rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" type="button" data-drawer-target="warrantiesDrawer" data-drawer-show="warrantiesDrawer" aria-controls="warrantiesDrawer">Show my warranties</button>
+</div>
+
+<div id="warrantiesDrawer" class="fixed left-0 top-0 z-40 flex h-screen w-full max-w-md -translate-x-full flex-col justify-between space-y-4 overflow-y-auto bg-white p-4 antialiased transition-transform dark:bg-gray-800 md:space-y-6" tabindex="-1" aria-labelledby="drawer-label" aria-hidden="true">
+  <div class="flex-1 space-y-4">
+    <div class="flex items-center justify-between">
+      <h2 class="text-base font-semibold uppercase leading-none text-gray-500 dark:text-gray-400">My warranties</h2>
+
+      <button type="button" data-drawer-dismiss="warrantiesDrawer" data-drawer-hide="warrantiesDrawer" class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+        <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
+        </svg>
+      </button>
+    </div>
+    <div class="items-center space-y-4 sm:flex sm:space-x-4 md:space-y-0">
+      <form action="#" class="w-full">
+        <label for="stars-input" class="sr-only mb-2 block text-sm font-medium text-gray-900 dark:text-white">Select review type</label>
+        <select id="stars-input" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500">
+          <option selected>All warranties</option>
+          <option value="limited">Limited</option>
+          <option value="standard">Standard</option>
+          <option value="extended">Extended</option>
+          <option value="premium">Premium</option>
+        </select>
+      </form>
+      <button id="showDropdownButton3" data-dropdown-toggle="showDropdown3" type="button" class="flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">
+        Show: Active only
+        <svg class="-me-0.5 ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" />
+        </svg>
+      </button>
+      <div id="showDropdown3" class="z-10 hidden w-36 divide-y divide-gray-100 rounded-lg bg-white shadow dark:bg-gray-700" data-popper-placement="bottom">
+        <ul class="p-2 text-left text-sm font-medium text-gray-500 dark:text-gray-400" aria-labelledby="filterDropdownButtonButton3">
+          <li>
+            <a href="#" class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
+              <span class="me-2 h-2.5 w-2.5 rounded-full bg-green-600"></span>
+              <span>Active</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
+              <span class="me-2 h-2.5 w-2.5 rounded-full bg-primary-700"></span>
+              Pre-order
+            </a>
+          </li>
+          <li>
+            <a href="#" class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
+              <span class="me-2 h-2.5 w-2.5 rounded-full bg-yellow-300"></span>
+              Pending
+            </a>
+          </li>
+          <li>
+            <a href="#" class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
+              <span class="me-2 h-2.5 w-2.5 rounded-full bg-red-600"></span>
+              Expired
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Cards -->
+    <div class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700">
+      <div class="flex items-center justify-between border-b border-gray-200 pb-4 dark:border-gray-600">
+        <a href="#" class="font-semibold text-gray-900 hover:underline dark:text-white">Apple iMac 27"</a>
+        <span class="inline-flex items-center rounded bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">
+          <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.5 4h-13m13 16h-13M8 20v-3.333a2 2 0 0 1 .4-1.2L10 12.6a1 1 0 0 0 0-1.2L8.4 8.533a2 2 0 0 1-.4-1.2V4h8v3.333a2 2 0 0 1-.4 1.2L13.957 11.4a1 1 0 0 0 0 1.2l1.643 2.867a2 2 0 0 1 .4 1.2V20H8Z"></path>
+          </svg>
+          Pending
+        </span>
+      </div>
+      <div class="items-center space-y-4 border-b border-gray-200 py-4 dark:border-gray-600 sm:flex sm:space-x-4 sm:space-y-0">
+        <button type="button" class="w-full rounded-lg bg-primary-700 px-3 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Extend</button>
+        <a href="#" class="inline-flex w-full items-center justify-center rounded-lg  border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700 sm:mt-0"> Download certificate </a>
+      </div>
+      <div class="items-center pt-4 text-sm sm:flex sm:flex-wrap sm:space-x-4">
+        <dl class="mb-4 flex items-center text-gray-500 dark:text-gray-400 sm:mb-0">
+          <dt class="me-2 font-medium text-gray-900 dark:text-white">Warranty length:</dt>
+          <dd>24 months</dd>
+        </dl>
+        <dl class="flex items-center text-gray-500 dark:text-gray-400">
+          <dt class="me-2 font-medium text-gray-900 dark:text-white">Type:</dt>
+          <dd>Limited warranty</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700">
+      <div class="flex items-center justify-between border-b border-gray-200 pb-4 dark:border-gray-600">
+        <a href="#" class="font-semibold text-gray-900 hover:underline dark:text-white">PlayStation®5 Console</a>
+        <span class="inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
+          <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"></path>
+          </svg>
+          Active
+        </span>
+      </div>
+      <div class="items-center space-y-4 border-b border-gray-200 py-4 dark:border-gray-600 sm:flex sm:space-x-4 sm:space-y-0">
+        <button type="button" class="w-full rounded-lg bg-primary-700 px-3 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Extend</button>
+        <a href="#" class="inline-flex w-full items-center justify-center rounded-lg  border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700 sm:mt-0"> Download certificate </a>
+      </div>
+      <div class="items-center pt-4 text-sm sm:flex sm:flex-wrap sm:space-x-4">
+        <dl class="mb-4 flex items-center text-gray-500 dark:text-gray-400 sm:mb-0">
+          <dt class="me-2 font-medium text-gray-900 dark:text-white">Warranty length:</dt>
+          <dd>12 months</dd>
+        </dl>
+        <dl class="flex items-center text-gray-500 dark:text-gray-400">
+          <dt class="me-2 font-medium text-gray-900 dark:text-white">Type:</dt>
+          <dd>Standard warranty</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700">
+      <div class="flex items-center justify-between border-b border-gray-200 pb-4 dark:border-gray-600">
+        <a href="#" class="font-semibold text-gray-900 hover:underline dark:text-white">MacBook Pro 16"</a>
+        <span class="inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
+          <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"></path>
+          </svg>
+          Active
+        </span>
+      </div>
+      <div class="items-center space-y-4 border-b border-gray-200 py-4 dark:border-gray-600 sm:flex sm:space-x-4 sm:space-y-0">
+        <button type="button" class="w-full rounded-lg bg-primary-700 px-3 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Extend</button>
+        <a href="#" class="inline-flex w-full items-center justify-center rounded-lg  border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700 sm:mt-0"> Download certificate </a>
+      </div>
+      <div class="items-center pt-4 text-sm sm:flex sm:flex-wrap sm:space-x-4">
+        <dl class="mb-4 flex items-center text-gray-500 dark:text-gray-400 sm:mb-0">
+          <dt class="me-2 font-medium text-gray-900 dark:text-white">Warranty length:</dt>
+          <dd>36 months</dd>
+        </dl>
+        <dl class="flex items-center text-gray-500 dark:text-gray-400">
+          <dt class="me-2 font-medium text-gray-900 dark:text-white">Type:</dt>
+          <dd>Extended warranty</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700">
+      <div class="flex items-center justify-between border-b border-gray-200 pb-4 dark:border-gray-600">
+        <a href="#" class="font-semibold text-gray-900 hover:underline dark:text-white">Microsoft Surface Pro</a>
+        <span class="inline-flex items-center rounded bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800 dark:bg-gray-700 dark:text-gray-300">
+          <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m6 6 12 12m3-6a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+          </svg>
+          Expired
+        </span>
+      </div>
+      <div class="items-center space-y-4 border-b border-gray-200 py-4 dark:border-gray-600 sm:flex sm:space-x-4 sm:space-y-0">
+        <button type="button" class="w-full rounded-lg bg-primary-700 px-3 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Extend</button>
+        <a href="#" class="inline-flex w-full items-center justify-center rounded-lg  border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700 sm:mt-0"> Download certificate </a>
+      </div>
+      <div class="items-center pt-4 text-sm sm:flex sm:flex-wrap sm:space-x-4">
+        <dl class="mb-4 flex items-center text-gray-500 dark:text-gray-400 sm:mb-0">
+          <dt class="me-2 font-medium text-gray-900 dark:text-white">Warranty length:</dt>
+          <dd>24 months</dd>
+        </dl>
+        <dl class="flex items-center text-gray-500 dark:text-gray-400">
+          <dt class="me-2 font-medium text-gray-900 dark:text-white">Type:</dt>
+          <dd>Standard warranty</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="flex w-full justify-center rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">Back to account</a>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    document.getElementById('warrantiesButton').click();
+});
+
+</script>

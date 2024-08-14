@@ -1,0 +1,302 @@
+<div class="m-5 text-center">
+  <button id="shoppingCartButton" class="rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" type="button" data-drawer-target="shoppingCartDrawer" data-drawer-show="shoppingCartDrawer" aria-controls="shoppingCartDrawer">Show shopping cart</button>
+</div>
+
+<div id="shoppingCartDrawer" class="antialiased fixed left-0 top-0 z-40 flex h-screen w-full max-w-md -translate-x-full flex-col justify-between space-y-4 overflow-y-auto bg-white p-4 transition-transform dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-label" aria-hidden="true">
+  <div class="flex-1 space-y-4">
+    <div class="flex items-center justify-between">
+      <h3 class="text-base font-semibold uppercase leading-none text-gray-500 dark:text-gray-400">My shopping cart</h3>
+
+      <button type="button" data-drawer-dismiss="shoppingCartDrawer" data-drawer-hide="shoppingCartDrawer" class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+        <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="space-y-2">
+      <p class="text-sm font-normal text-gray-500 dark:text-gray-400">You can have <span class="font-medium text-gray-900 dark:text-white">free shipping</span> if you add products worth <span class="font-medium text-gray-900 dark:text-white">$600</span>.</p>
+      <div class="h-1.5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
+        <div class="h-1.5 rounded-full bg-primary-700 dark:bg-primary-600" style="width: 45%"></div>
+      </div>
+      <a href="#" class="flex items-center text-sm font-medium text-primary-700 hover:underline dark:text-primary-500">
+        How can I get this?
+        <svg class="ms-2 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="divide-y divide-gray-200 border-t border-gray-200 dark:divide-gray-700 dark:border-gray-700">
+      <div class="flex items-start gap-4 py-4">
+        <a href="#" class="h-20 w-20 shrink-0">
+          <img class="h-full w-full dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/iphone-light.svg" alt="imac image" />
+          <img class="hidden h-full w-full dark:block" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/iphone-dark.svg" alt="imac image" />
+        </a>
+
+        <div class="min-w-0 flex-1 space-y-3">
+          <a href="#" class="text-base font-medium text-gray-900 hover:underline dark:text-white"> Apple iPhone 15, 256GB, Gold </a>
+          <div class="flex items-center gap-4">
+            <form>
+              <label for="quantity-input" class="sr-only">Choose quantity:</label>
+              <div class="relative flex w-32 items-center">
+                <button type="button" id="decrement-button" data-input-counter-decrement="quantity-input" class="flex h-9 items-center justify-center rounded-s-lg border border-gray-300 bg-gray-100 p-3 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                  <svg class="h-3 w-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16" />
+                  </svg>
+                </button>
+                <input type="text" id="quantity-input" data-input-counter aria-describedby="helper-text-explanation" class="block h-9 w-full border-x-0 border-gray-300 bg-gray-50 py-2 text-center text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" value="2" required />
+                <button type="button" id="increment-button" data-input-counter-increment="quantity-input" class="flex h-9 items-center justify-center rounded-e-lg border border-gray-300 bg-gray-100 p-3 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                  <svg class="h-3 w-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
+                  </svg>
+                </button>
+              </div>
+            </form>
+            <p class="text-base font-bold text-gray-900 dark:text-white">$1,797</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <button type="button" class="inline-flex items-center text-sm font-medium text-gray-500 hover:underline dark:text-gray-400">
+              <svg class="me-2 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z" />
+              </svg>
+              Move to Favorites
+            </button>
+            <button type="button" class="inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500">
+              <svg class="me-2 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z" />
+              </svg>
+              Remove
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4 py-4">
+        <a href="#" class="h-20 w-20 shrink-0">
+          <img class="h-full w-full dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/xbox-light.svg" alt="imac image" />
+          <img class="hidden h-full w-full dark:block" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/xbox-dark.svg" alt="imac image" />
+        </a>
+
+        <div class="min-w-0 flex-1 space-y-3">
+          <a href="#" class="text-base font-medium text-gray-900 hover:underline dark:text-white"> Xbox Series X, 1TB, Limited </a>
+          <div class="flex items-center gap-4">
+            <form>
+              <label for="quantity-input" class="sr-only">Choose quantity:</label>
+              <div class="relative flex w-32 items-center">
+                <button type="button" id="decrement-button-3" data-input-counter-decrement="quantity-input-3" class="flex h-9 items-center justify-center rounded-s-lg border border-gray-300 bg-gray-100 p-3 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                  <svg class="h-3 w-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16" />
+                  </svg>
+                </button>
+                <input type="text" id="quantity-input-3" data-input-counter aria-describedby="helper-text-explanation-3" class="block h-9 w-full border-x-0 border-gray-300 bg-gray-50 py-2 text-center text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" value="1" required />
+                <button type="button" id="increment-button-3" data-input-counter-increment="quantity-input-3" class="flex h-9 items-center justify-center rounded-e-lg border border-gray-300 bg-gray-100 p-3 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                  <svg class="h-3 w-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
+                  </svg>
+                </button>
+              </div>
+            </form>
+            <p class="text-base font-bold text-gray-900 dark:text-white">$599</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <button type="button" class="inline-flex items-center text-sm font-medium text-gray-500 hover:underline dark:text-gray-400">
+              <svg class="me-2 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z" />
+              </svg>
+              Move to Favorites
+            </button>
+            <button type="button" class="inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500">
+              <svg class="me-2 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z" />
+              </svg>
+              Remove
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 py-4">
+        <a href="#" class="h-20 w-20 shrink-0">
+          <img class="h-full w-full dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/ps5-light.svg" alt="imac image" />
+          <img class="hidden h-full w-full dark:block" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/ps5-dark.svg" alt="imac image" />
+        </a>
+
+        <div class="min-w-0 flex-1 space-y-3">
+          <a href="#" class="text-base font-medium text-gray-900 hover:underline dark:text-white"> Sony PlayStation 5, 2 controllers </a>
+          <div class="flex items-center gap-4">
+            <form>
+              <label for="quantity-input" class="sr-only">Choose quantity:</label>
+              <div class="relative flex w-32 items-center">
+                <button type="button" id="decrement-button-4" data-input-counter-decrement="quantity-input-4" class="flex h-9 items-center justify-center rounded-s-lg border border-gray-300 bg-gray-100 p-3 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                  <svg class="h-3 w-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16" />
+                  </svg>
+                </button>
+                <input type="text" id="quantity-input-4" data-input-counter aria-describedby="helper-text-explanation-4" class="block h-9 w-full border-x-0 border-gray-300 bg-gray-50 py-2 text-center text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" value="1" required />
+                <button type="button" id="increment-button-4" data-input-counter-increment="quantity-input-4" class="flex h-9 items-center justify-center rounded-e-lg border border-gray-300 bg-gray-100 p-3 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                  <svg class="h-3 w-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
+                  </svg>
+                </button>
+              </div>
+            </form>
+            <p class="text-base font-bold text-gray-900 dark:text-white">$799</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <button type="button" class="inline-flex items-center text-sm font-medium text-gray-500 hover:underline dark:text-gray-400">
+              <svg class="me-2 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z" />
+              </svg>
+              Move to Favorites
+            </button>
+            <button type="button" class="inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500">
+              <svg class="me-2 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z" />
+              </svg>
+              Remove
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 py-4">
+        <a href="#" class="h-20 w-20 shrink-0">
+          <img class="h-full w-full dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-light.svg" alt="imac image" />
+          <img class="hidden h-full w-full dark:block" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-dark.svg" alt="imac image" />
+        </a>
+
+        <div class="min-w-0 flex-1 space-y-3">
+          <a href="#" class="text-base font-medium text-gray-900 hover:underline dark:text-white"> Apple Watch SE, 38 mm </a>
+          <div class="flex items-center gap-4">
+            <form>
+              <label for="quantity-input" class="sr-only">Choose quantity:</label>
+              <div class="relative flex w-32 items-center">
+                <button type="button" id="decrement-button-5" data-input-counter-decrement="quantity-input-5" class="flex h-9 items-center justify-center rounded-s-lg border border-gray-300 bg-gray-100 p-3 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                  <svg class="h-3 w-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16" />
+                  </svg>
+                </button>
+                <input type="text" id="quantity-input-5" data-input-counter aria-describedby="helper-text-explanation-5" class="block h-9 w-full border-x-0 border-gray-300 bg-gray-50 py-2 text-center text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" value="1" required />
+                <button type="button" id="increment-button-5" data-input-counter-increment="quantity-input-5" class="flex h-9 items-center justify-center rounded-e-lg border border-gray-300 bg-gray-100 p-3 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                  <svg class="h-3 w-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
+                  </svg>
+                </button>
+              </div>
+            </form>
+            <p class="text-base font-bold text-gray-900 dark:text-white">$299</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <button type="button" class="inline-flex items-center text-sm font-medium text-gray-500 hover:underline dark:text-gray-400">
+              <svg class="me-2 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z" />
+              </svg>
+              Move to Favorites
+            </button>
+            <button type="button" class="inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500">
+              <svg class="me-2 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z" />
+              </svg>
+              Remove
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 py-4">
+        <a href="#" class="h-20 w-20 shrink-0">
+          <img class="h-full w-full dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front.svg" alt="imac image" />
+          <img class="hidden h-full w-full dark:block" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front-dark.svg" alt="imac image" />
+        </a>
+
+        <div class="min-w-0 flex-1 space-y-3">
+          <a href="#" class="text-base font-medium text-gray-900 hover:underline dark:text-white"> Apple iMac, 5k, 256GB, Blue </a>
+          <div class="flex items-center gap-4">
+            <form>
+              <label for="quantity-input" class="sr-only">Choose quantity:</label>
+              <div class="relative flex w-32 items-center">
+                <button type="button" id="decrement-button-6" data-input-counter-decrement="quantity-input-6" class="flex h-9 items-center justify-center rounded-s-lg border border-gray-300 bg-gray-100 p-3 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                  <svg class="h-3 w-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16" />
+                  </svg>
+                </button>
+                <input type="text" id="quantity-input-6" data-input-counter aria-describedby="helper-text-explanation-6" class="block h-9 w-full border-x-0 border-gray-300 bg-gray-50 py-2 text-center text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" value="1" required />
+                <button type="button" id="increment-button-6" data-input-counter-increment="quantity-input-6" class="flex h-9 items-center justify-center rounded-e-lg border border-gray-300 bg-gray-100 p-3 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                  <svg class="h-3 w-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
+                  </svg>
+                </button>
+              </div>
+            </form>
+            <p class="text-base font-bold text-gray-900 dark:text-white">$1,799</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <button type="button" class="inline-flex items-center text-sm font-medium text-gray-500 hover:underline dark:text-gray-400">
+              <svg class="me-2 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z" />
+              </svg>
+              Move to Favorites
+            </button>
+            <button type="button" class="inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500">
+              <svg class="me-2 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z" />
+              </svg>
+              Remove
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" data-collapse-toggle="coupon-code-drawer" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Add coupon code</button>
+
+    <div id="coupon-code-drawer" class="mb-4 hidden rounded-lg border border-gray-100 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700">
+      <form class="space-y-4">
+        <label for="voucher" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Do you have a voucher or gift card?</label>
+        <div class="grid grid-cols-4 gap-4">
+          <input type="text" id="voucher" class="bg-gray-white col-span-3 block w-full rounded-lg border border-gray-300 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="" required />
+          <button type="button" class="col-span-1 flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Apply</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Total price -->
+    <div class="mb-4 rounded-lg border border-gray-100 bg-gray-50 px-4 dark:border-gray-600 dark:bg-gray-700">
+      <div class="divide-y divide-gray-200 dark:divide-gray-600">
+        <dl class="flex items-center justify-between gap-4 py-3">
+          <dt class="font-normal text-gray-500 dark:text-gray-400">Subtotal</dt>
+          <dd class="font-medium text-gray-900 dark:text-white">$5,992</dd>
+        </dl>
+
+        <dl class="flex items-center justify-between gap-4 py-3">
+          <dt class="font-normal text-gray-500 dark:text-gray-400">Savings</dt>
+          <dd class="font-medium text-green-500 dark:text-green-400">$0</dd>
+        </dl>
+
+        <dl class="flex items-center justify-between gap-4 py-3">
+          <dt class="font-normal text-gray-500 dark:text-gray-400">Store Pickup</dt>
+          <dd class="font-medium text-gray-900 dark:text-white">$99</dd>
+        </dl>
+
+        <dl class="flex items-center justify-between gap-4 pb-4 pt-3">
+          <dt class="font-normal text-gray-500 dark:text-gray-400">Tax</dt>
+          <dd class="font-medium text-gray-900 dark:text-white">$199</dd>
+        </dl>
+
+        <dl class="flex items-center justify-between gap-4 py-3 text-lg font-bold text-gray-900 dark:text-white">
+          <dt>Total</dt>
+          <dd>$6,290</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-6 gap-4 sm:flex sm:items-center sm:justify-center">
+    <button type="button" class="mb-4 flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600  dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:mb-0 sm:mt-0">Checkout</button>
+    <button type="button" class="block w-full rounded-lg  border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">Continue Shopping</button>
+  </div>
+</div>
+
+<scrirpt>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    document.getElementById('shoppingCartButton').click();
+});
+</script>

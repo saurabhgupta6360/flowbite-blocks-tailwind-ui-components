@@ -1,0 +1,177 @@
+<button data-drawer-target="sidebar-team-switch" data-drawer-toggle="sidebar-team-switch" aria-controls="sidebar-team-switch" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+   <span class="sr-only">Open sidebar</span>
+   <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+   </svg>
+</button>
+
+<aside id="sidebar-team-switch" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+  <div class="overflow-y-auto py-5 px-3 h-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+      <button id="dropdownCompanyNameButton" data-dropdown-toggle="dropdownCompanyName" class="flex justify-between items-center p-2 w-full rounded-lg dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-50 dark:hover-bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700" type="button">
+          <span class="sr-only">Open user menu</span>
+          <div class="flex items-center">
+              <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-7" alt="Flowbite Logo" />
+              <div>   
+                  <div class="font-semibold leading-none text-gray-900 dark:text-white mb-0.5">Flowbite</div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">Team plan</div>
+              </div>
+          </div>
+          <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      </button>
+      <!-- Dropdown menu -->
+      <div id="dropdownCompanyName" class="hidden z-10 w-60 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600" data-popper-placement="bottom">
+          <a href="#" class="flex items-center py-3 px-4 rounded hover:bg-gray-50 dark:hover:bg-gray-600">
+              <svg aria-hidden="true" class="h-8" viewBox="0 0 54 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_3_26)">
+                  <path d="M53.52 2.59375L31.52 7.98375C31.3113 8.03236 31.095 8.03882 30.8838 8.00276C30.6726 7.9667 30.4707 7.88884 30.29 7.77375L19.89 0.973752C19.6999 0.850063 19.4852 0.769031 19.2608 0.736231C19.0364 0.703432 18.8076 0.719644 18.59 0.783752L0.59 6.08375C0.424945 6.12338 0.277612 6.21644 0.170912 6.34846C0.0642122 6.48048 0.00412684 6.64406 0 6.81375L0 17.5938L18.59 12.1238C18.8076 12.0596 19.0364 12.0434 19.2608 12.0762C19.4852 12.109 19.6999 12.1901 19.89 12.3138L30.29 19.1038C30.4688 19.2232 30.6707 19.3037 30.8826 19.3398C31.0946 19.376 31.3117 19.3671 31.52 19.3138L54 13.8138V2.95375C53.9974 2.85206 53.9552 2.75541 53.8823 2.68442C53.8094 2.61343 53.7117 2.57372 53.61 2.57375L53.52 2.59375Z" fill="#FF7F66"/>
+                  <path d="M40.2501 28.5637L31.5201 30.6637C31.3116 30.7146 31.0949 30.7222 30.8833 30.6861C30.6717 30.65 30.4698 30.5709 30.2901 30.4537L19.8901 23.6537C19.8486 23.6243 19.8016 23.6039 19.7519 23.5935C19.7022 23.5831 19.6509 23.5831 19.6011 23.5934C19.5514 23.6037 19.5044 23.6242 19.4629 23.6535C19.4214 23.6828 19.3864 23.7203 19.3601 23.7637C19.314 23.82 19.2892 23.8908 19.2901 23.9637V34.1937C19.2897 34.3187 19.3207 34.4418 19.38 34.5519C19.4394 34.6619 19.5254 34.7553 19.6301 34.8237L30.2901 41.8237C30.4706 41.9392 30.6728 42.0165 30.8844 42.0509C31.0959 42.0853 31.3122 42.076 31.5201 42.0237L40.7501 39.8137C42.2417 39.4535 43.5696 38.6037 44.5213 37.4C45.473 36.1962 45.9937 34.7082 46.0001 33.1737V32.9637C45.9816 31.7401 45.4785 30.5738 44.6011 29.7208C43.7237 28.8677 42.5437 28.3976 41.3201 28.4137C40.959 28.4243 40.6002 28.4746 40.2501 28.5637Z" fill="#FF7F66"/>
+                  <path d="M40.25 51.2438L31.52 53.3438C31.3114 53.3924 31.0951 53.3988 30.8839 53.3628C30.6727 53.3267 30.4708 53.2489 30.29 53.1338L19.89 46.3338C19.8487 46.3054 19.8022 46.2854 19.7532 46.275C19.7041 46.2647 19.6535 46.2641 19.6042 46.2734C19.555 46.2827 19.508 46.3017 19.4661 46.3292C19.4242 46.3567 19.3882 46.3923 19.36 46.4338C19.3146 46.4943 19.29 46.568 19.29 46.6438V56.8738C19.2897 56.9988 19.3206 57.1219 19.38 57.232C19.4394 57.342 19.5253 57.4354 19.63 57.5038L30.29 64.5038C30.4688 64.6232 30.6707 64.7037 30.8827 64.7399C31.0946 64.776 31.3118 64.7672 31.52 64.7138L40.75 62.4938C42.2434 62.1369 43.5732 61.2879 44.5255 60.0834C45.4778 58.879 45.9972 57.3892 46 55.8538V55.6438C45.9816 54.4202 45.4785 53.2539 44.6011 52.4009C43.7237 51.5478 42.5437 51.0777 41.32 51.0938C40.9586 51.0995 40.5992 51.1499 40.25 51.2438Z" fill="#FF7F66"/>
+                  <path opacity="0.32" d="M30.8599 42.0137V30.7237C31.0776 30.7687 31.3022 30.7687 31.5199 30.7237L35.2799 29.7237L37.4799 40.5237L31.4799 41.9837C31.2777 42.0377 31.0663 42.0479 30.8599 42.0137ZM39.6799 51.3437L31.5199 53.3437C31.3022 53.3887 31.0776 53.3887 30.8599 53.3437V64.7237C31.0776 64.7687 31.3022 64.7687 31.5199 64.7237L41.8799 62.1837L39.6799 51.3437ZM30.8599 19.3437C31.0776 19.3887 31.3022 19.3887 31.5199 19.3437L33.0899 18.9637L30.8599 8.00366V19.3437Z" fill="#2A344F"/>
+                  <g opacity="0.16">
+                  <path opacity="0.16" d="M19.29 12.0837C19.5021 12.1241 19.7053 12.202 19.89 12.3137L30.29 19.1137C30.4617 19.2278 30.6562 19.3029 30.86 19.3337V7.99365C30.6562 7.96286 30.4617 7.88776 30.29 7.77365L19.89 0.973652C19.7053 0.862007 19.5021 0.784127 19.29 0.743652V12.0837Z" fill="#2A344F"/>
+                  <path opacity="0.16" d="M30.86 53.3636C30.6574 53.3229 30.4642 53.2449 30.29 53.1336L19.89 46.3336C19.8038 46.2767 19.6985 46.2563 19.5973 46.2769C19.496 46.2975 19.4071 46.3575 19.35 46.4436C19.3107 46.5029 19.2898 46.5725 19.29 46.6436V56.8736C19.2897 56.9986 19.3206 57.1218 19.38 57.2318C19.4394 57.3418 19.5253 57.4353 19.63 57.5036L30.29 64.5036C30.4655 64.6102 30.6585 64.6847 30.86 64.7236V53.3636Z" fill="#2A344F"/><path opacity="0.16" d="M19.89 23.6537C19.8038 23.5967 19.6985 23.5763 19.5973 23.597C19.496 23.6176 19.4071 23.6775 19.35 23.7637C19.3107 23.8229 19.2898 23.8925 19.29 23.9637V34.1937C19.2897 34.3187 19.3206 34.4418 19.38 34.5519C19.4394 34.6619 19.5253 34.7553 19.63 34.8237L30.29 41.8237C30.4639 41.9334 30.6575 42.0081 30.86 42.0437V30.7237C30.6556 30.6892 30.4611 30.6107 30.29 30.4937L19.89 23.6537Z" fill="#2A344F"/></g></g><defs><clipPath id="clip0_3_26"><rect width="54" height="64" fill="white" transform="translate(0 0.723633)"/></clipPath></defs>
+              </svg>                        
+              <div class="ml-3">
+                  <div class="font-semibold leading-none text-gray-900 dark:text-white mb-0.5">Themesberg</div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">Personal plan</div>
+              </div>
+          </a>
+      </div>
+      <ul class="mt-5 space-y-2">
+          <li>
+              <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                  <svg aria-hidden="true" class="w-6 h-6 text-gray-400 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                  <span class="ml-3">Home</span>
+              </a>
+          </li>
+          <li>
+              <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-tasks" data-collapse-toggle="dropdown-tasks">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>
+                  <span class="flex-1 ml-3 text-left whitespace-nowrap">My Tasks</span>
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+              <ul id="dropdown-tasks" class="hidden py-2 space-y-2">
+                  <li>
+                      <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">To do</a>
+                  </li>
+                  <li>
+                      <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">In progress</a>
+                  </li>
+                  <li>
+                      <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Completed</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-400 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path><path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg>
+                  <span class="flex-1 ml-3 whitespace-nowrap">Inbox</span>
+                  <span class="inline-flex justify-center items-center w-5 h-5 text-xs font-semibold rounded-full text-primary-800 bg-primary-100 dark:bg-primary-200 dark:text-primary-800">
+                      6   
+                  </span>
+              </a>
+          </li>
+          <li>
+              <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                  <svg aria-hidden="true" class="w-6 h-6 text-gray-400 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                  <span class="ml-3">Reporting</span>
+              </a>
+          </li>
+          <li>
+              <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                  <svg aria-hidden="true" class="w-6 h-6 text-gray-400 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z" clip-rule="evenodd"></path><path d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z"></path></svg>
+                  <span class="ml-3">Portfolios</span>
+              </a>
+          </li>
+          <li>
+              <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                  <svg aria-hidden="true" class="w-6 h-6 text-gray-400 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"></path></svg>
+                  <span class="ml-3">Goals</span>
+              </a>
+          </li>
+      </ul>
+      <div class="pt-5 pl-2 mt-5 mb-4 text-sm text-gray-500 border-t border-gray-200 dark:text-gray-400 dark:border-gray-700">
+          <h3>Bergside projects</h3>
+      </div>
+      <ul class="pl-2 space-y-4">
+          <li>
+              <a href="#" class="flex items-center text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:underline dark:text-white group">
+                  <span class="w-4 h-4 rounded bg-primary-600"></span>
+                  <span class="ml-3">Flowbite library</span>
+              </a>
+          </li>
+          <li>
+              <a href="#" class="flex items-center text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:underline dark:text-white group">
+                  <span class="w-4 h-4 bg-teal-400 rounded"></span>
+                  <span class="ml-3">Themesberg</span>
+              </a>
+          </li>
+          <li>
+              <a href="#" class="flex items-center text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:underline dark:text-white group">
+                  <span class="w-4 h-4 bg-orange-300 rounded"></span>
+                  <span class="ml-3">Flowbite blocks</span>
+              </a>
+          </li>
+          <li>
+              <a href="#" class="flex items-center text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:underline dark:text-white group">
+                  <span class="w-4 h-4 bg-purple-500 rounded"></span>
+                  <span class="ml-3">Iconscale</span>
+              </a>
+          </li>
+          <li>
+              <a href="#" class="flex items-center text-base font-medium text-gray-900 rounded-lg transition duration-75 dark:text-gray-200 group">
+                  <svg class="w-4 h-4 rounded border border-gray-200 dark:border-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                  <span class="ml-3 text-gray-500 dark:text-gray-400 hover:underline">Add new project</span>
+              </a>
+          </li>
+      </ul>
+  </div>
+  <div class="absolute bottom-0 left-0 justify-center p-4 w-full bg-white dark:bg-gray-800 z-20">
+      <ul class="pb-4 pl-2 mb-4 space-y-2 border-b border-gray-200 dark:border-gray-700">
+          <li>
+              <a href="#" class="flex items-center text-sm text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white group">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-4 h-4 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>
+                  <span class="ml-2">Settings</span>
+              </a>
+          </li>
+          <li>
+              <a href="#" class="flex items-center text-sm text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white group">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-4 h-4 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
+                  <span class="ml-2">Help & getting started</span>
+              </a>
+          </li>
+      </ul>
+      <button id="dropdownUserNameButton" data-dropdown-toggle="dropdownUserName" class="flex justify-between items-center p-2 my-4 w-full rounded-lg dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-50 dark:hover-bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700" type="button">
+          <span class="sr-only">Open user menu</span>
+          <div class="flex items-center">
+              <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" class="mr-3 w-8 h-8 rounded-full" alt="Bonnie avatar" />
+              <div class="text-left">   
+                  <div class="font-semibold leading-none text-gray-900 dark:text-white mb-0.5">Bonnie Green</div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">name@flowbite.com</div>
+              </div>
+          </div>
+          <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      </button>
+      <!-- Dropdown menu -->
+      <div id="dropdownUserName" class="hidden z-10 w-60 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600" data-popper-placement="top">
+          <a href="#" class="flex items-center py-3 px-4 rounded hover:bg-gray-50 dark:hover:bg-gray-600">
+              <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" class="mr-3 w-8 h-8 rounded-full" alt="Micheal avatar" />
+              <div class="text-left">   
+                  <div class="font-semibold leading-none text-gray-900 dark:text-white mb-0.5">Micheal Gough</div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">michael@flowbite.com</div>
+              </div>
+          </a>
+          <a href="#" class="flex items-center py-3 px-4 rounded hover:bg-gray-50 dark:hover:bg-gray-600">
+              <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" class="mr-3 w-8 h-8 rounded-full" alt="Roberta avatar" />
+              <div class="text-left">   
+                  <div class="font-semibold leading-none text-gray-900 dark:text-white mb-0.5">Roberta Casas</div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">roberta@flowbite.com</div>
+              </div>
+          </a>
+      </div>
+      <a href="#" class="flex items-center pl-2 text-sm text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white group">
+          <svg aria-hidden="true" class="flex-shrink-0 w-4 h-4 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
+          <span class="ml-2">Invite team members</span>
+      </a>
+  </div>
+</aside>

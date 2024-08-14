@@ -1,0 +1,220 @@
+<div class="m-5 text-center">
+  <button id="ordersRefundButton" class="rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" type="button" data-drawer-target="ordersRefundDrawer" data-drawer-show="ordersRefundDrawer" aria-controls="ordersRefundDrawer">Show refunds drawer</button>
+</div>
+
+<div id="ordersRefundDrawer" class="fixed left-0 top-0 z-40 flex h-screen w-full max-w-md -translate-x-full flex-col justify-between space-y-4 overflow-y-auto bg-white p-4 antialiased transition-transform dark:bg-gray-800 md:space-y-6" tabindex="-1" aria-labelledby="drawer-label" aria-hidden="true">
+  <div class="flex-1 space-y-4">
+    <div class="flex items-center justify-between">
+      <h2 class="text-base font-semibold uppercase leading-none text-gray-500 dark:text-gray-400">Returned items</h2>
+
+      <button type="button" data-drawer-dismiss="ordersRefundDrawer" data-drawer-hide="ordersRefundDrawer" class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+        <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
+        </svg>
+      </button>
+    </div>
+    <div class="items-center space-y-4 sm:flex sm:space-x-4 md:space-y-0">
+      <form action="#" class="w-full">
+        <label for="refund-type-drawer" class="sr-only mb-2 block text-sm font-medium text-gray-900 dark:text-white">Select refund type</label>
+        <select id="refund-type-drawer" class="block w-full rounded-lg border border-gray-300 bg-gray-50 px-2.5 py-2 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500">
+          <option selected>All refunds</option>
+          <option value="ongoing">Ongoing</option>
+          <option value="complete">Completed</option>
+          <option value="denied">Denied</option>
+        </select>
+      </form>
+      <button id="dateDropdownButtonLabel4" data-dropdown-toggle="dateDropdownButton4" type="button" class="flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">
+        Last 7 days
+        <svg class="-me-0.5 ms-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" />
+        </svg>
+      </button>
+      <div id="dateDropdownButton4" class="z-10 hidden w-80 divide-y divide-gray-100 rounded bg-white shadow dark:divide-gray-600 dark:bg-gray-700">
+        <ul class="divide-y divide-gray-200 text-sm font-medium dark:divide-gray-600" aria-labelledby="dateDropdownButtonLabel4">
+          <li>
+            <a href="#" class="group flex items-center gap-2 px-4 py-2 text-primary-700 hover:bg-gray-100 dark:text-primary-500 dark:hover:bg-gray-600">
+              Today
+              <span class="font-normal text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"> Aug 21, 2023 - Aug 21, 2023 </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="group flex items-center gap-2 px-4 py-2 text-primary-700 hover:bg-gray-100 dark:text-primary-500 dark:hover:bg-gray-600">
+              Yesterday
+              <span class="font-normal text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"> Aug 20, 2023 - Aug 21, 2023 </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="group flex items-center gap-2 px-4 py-2 text-primary-700 hover:bg-gray-100 dark:text-primary-500 dark:hover:bg-gray-600">
+              Last 7 days
+              <span class="font-normal text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"> Aug 21, 2023 - Aug 21, 2023 </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="group flex items-center gap-2 px-4 py-2 text-primary-700 hover:bg-gray-100 dark:text-primary-500 dark:hover:bg-gray-600">
+              Last Month
+              <span class="font-normal text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"> Aug 15, 2023 - Aug 21, 2023 </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="group flex items-center gap-2 px-4 py-2 text-primary-700 hover:bg-gray-100 dark:text-primary-500 dark:hover:bg-gray-600">
+              Last year
+              <span class="font-normal text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"> Jan 1, 2023 - Aug 21, 2023 </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="group flex items-center gap-2 px-4 py-2 text-primary-700 hover:bg-gray-100 dark:text-primary-500 dark:hover:bg-gray-600">
+              All time
+              <span class="font-normal text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"> Feb 1, 2020 - Aug 21, 2023 </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <button type="button" class="flex w-full items-center justify-center rounded-lg bg-primary-700 px-3 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300   dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+      <svg class="-ms-0.5 me-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9V4a1 1 0 0 0-1-1H8.914a1 1 0 0 0-.707.293L4.293 7.207A1 1 0 0 0 4 7.914V20a1 1 0 0 0 1 1h4M9 3v4a1 1 0 0 1-1 1H4m11 6v4m-2-2h4m3 0a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z" />
+      </svg>
+      Add refund request
+    </button>
+    <div class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700">
+      <div class="flex items-center justify-between border-b border-gray-200 pb-4 dark:border-gray-600">
+        <h3 class="dark:text-gray-400 text-gray-500">
+          Return ID:
+          <a href="#" class="font-medium text-gray-900 hover:underline dark:text-white">#FWB1273643</a>
+        </h3>
+        <span class="ms-2 inline-flex items-center rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300">
+          <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.5 4h-13m13 16h-13M8 20v-3.333a2 2 0 0 1 .4-1.2L10 12.6a1 1 0 0 0 0-1.2L8.4 8.533a2 2 0 0 1-.4-1.2V4h8v3.333a2 2 0 0 1-.4 1.2L13.957 11.4a1 1 0 0 0 0 1.2l1.643 2.867a2 2 0 0 1 .4 1.2V20H8Z" />
+          </svg>
+          Ongoing
+        </span>
+      </div>
+      <div class="items-center space-y-4 border-b border-gray-200 py-4 dark:border-gray-600 sm:flex sm:space-x-4 sm:space-y-0">
+        <button type="button" class="w-full rounded-lg bg-red-700 px-3 py-2 text-sm font-medium text-white hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Cancel order</button>
+        <a href="#" class="inline-flex w-full items-center justify-center rounded-lg  border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700 sm:mt-0">
+          <svg class="-ms-0.5 me-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-6 5h6m-6 4h6M10 3v4h4V3h-4Z" />
+          </svg>
+          See details
+        </a>
+      </div>
+      <div class="items-center text-sm sm:flex sm:flex-wrap">
+        <dl class="mt-4 flex items-center text-gray-500 dark:text-gray-400 sm:me-4">
+          <dt class="me-2 font-medium text-gray-900 dark:text-white">Request on:</dt>
+          <dd>24.08.2024</dd>
+        </dl>
+        <dl class="mt-4 flex items-center text-gray-500 dark:text-gray-400 sm:me-4">
+          <dt class="me-2 font-medium text-gray-900 dark:text-white">Reason:</dt>
+          <dd>Poor quality</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700">
+      <div class="flex items-center justify-between border-b border-gray-200 pb-4 dark:border-gray-600">
+        <h3 class="dark:text-gray-400 text-gray-500">
+          Return ID:
+          <a href="#" class="font-medium text-gray-900 hover:underline dark:text-white">#FWB127322</a>
+        </h3>
+        <span class="ms-2 inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
+          <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5" />
+          </svg>
+          Completed
+        </span>
+      </div>
+      <div class="items-center border-b border-gray-200 py-4 dark:border-gray-600">
+        <a href="#" class="flex w-full items-center justify-center rounded-lg  border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">
+          <svg class="-ms-0.5 me-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-6 5h6m-6 4h6M10 3v4h4V3h-4Z" />
+          </svg>
+          See details
+        </a>
+      </div>
+      <div class="items-center text-sm sm:flex sm:flex-wrap">
+        <dl class="mt-4 flex items-center text-gray-500 dark:text-gray-400 sm:me-6">
+          <dt class="me-2 font-medium text-gray-900 dark:text-white">Request on:</dt>
+          <dd>24.05.2024</dd>
+        </dl>
+        <dl class="mt-4 flex items-center text-gray-500 dark:text-gray-400 sm:me-6">
+          <dt class="me-2 font-medium text-gray-900 dark:text-white">Reason:</dt>
+          <dd>Defective item</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700">
+      <div class="flex items-center justify-between border-b border-gray-200 pb-4 dark:border-gray-600">
+        <h3 class="dark:text-gray-400 text-gray-500">
+          Return ID:
+          <a href="#" class="font-medium text-gray-900 hover:underline dark:text-white">#FWB127204</a>
+        </h3>
+        <span class="ms-2 inline-flex items-center rounded bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800 dark:bg-red-900 dark:text-red-300">
+          <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
+          </svg>
+          Denied
+        </span>
+      </div>
+      <div class="items-center border-b border-gray-200 py-4 dark:border-gray-600">
+        <a href="#" class="flex w-full items-center justify-center rounded-lg  border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">
+          <svg class="-ms-0.5 me-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-6 5h6m-6 4h6M10 3v4h4V3h-4Z" />
+          </svg>
+          See details
+        </a>
+      </div>
+      <div class="items-center text-sm sm:flex sm:flex-wrap">
+        <dl class="mt-4 flex items-center text-gray-500 dark:text-gray-400 sm:me-6">
+          <dt class="me-2 font-medium text-gray-900 dark:text-white">Request on:</dt>
+          <dd>24.02.2024</dd>
+        </dl>
+        <dl class="mt-4 flex items-center text-gray-500 dark:text-gray-400 sm:me-6">
+          <dt class="me-2 font-medium text-gray-900 dark:text-white">Reason:</dt>
+          <dd>Changed mind</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700">
+      <div class="flex items-center justify-between border-b border-gray-200 pb-4 dark:border-gray-600">
+        <h3 class="dark:text-gray-400 text-gray-500">
+          Return ID:
+          <a href="#" class="font-medium text-gray-900 hover:underline dark:text-white">#FWB127056</a>
+        </h3>
+        <span class="ms-2 inline-flex items-center rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
+          <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5" />
+          </svg>
+          Completed
+        </span>
+      </div>
+      <div class="items-center border-b border-gray-200 py-4 dark:border-gray-600">
+        <a href="#" class="flex w-full items-center justify-center rounded-lg  border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">
+          <svg class="-ms-0.5 me-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-6 5h6m-6 4h6M10 3v4h4V3h-4Z" />
+          </svg>
+          See details
+        </a>
+      </div>
+      <div class="items-center text-sm sm:flex sm:flex-wrap">
+        <dl class="mt-4 flex items-center text-gray-500 dark:text-gray-400 sm:me-6">
+          <dt class="me-2 font-medium text-gray-900 dark:text-white">Request on:</dt>
+          <dd>24.10.2023</dd>
+        </dl>
+        <dl class="mt-4 flex items-center text-gray-500 dark:text-gray-400 sm:me-6">
+          <dt class="me-2 font-medium text-gray-900 dark:text-white">Reason:</dt>
+          <dd>Missing parts</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="flex w-full justify-center rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">Back to shopping</a>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    document.getElementById('ordersRefundButton').click();
+});
+<script>
