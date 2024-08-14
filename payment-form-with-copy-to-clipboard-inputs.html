@@ -1,0 +1,223 @@
+<section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
+  <div class="mx-auto max-w-2xl px-4 2xl:px-0">
+    <h2 class="mb-4 text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl md:mb-8">Payment details</h2>
+    <form action="#" class="mx-auto space-y-6">
+      <div class="space-y-4">
+        <div class="items-end sm:flex sm:space-x-4">
+          <div class="mb-4 w-full sm:mb-0 sm:w-64">
+            <label for="amount" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Amount due</label>
+            <div class="relative">
+              <input id="amount" type="text" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm font-medium text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500 sm:w-64" value="$149" disabled readonly />
+              <button type="button" data-copy-to-clipboard-target="amount" data-tooltip-target="tooltip-amount" class="absolute end-2 top-1/2 inline-flex -translate-y-1/2 items-center justify-center rounded-lg p-2 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
+                <span id="default-icon-amount">
+                  <svg class="h-3.5 w-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                    <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z" />
+                  </svg>
+                </span>
+                <span id="success-icon-amount" class="inline-flex hidden items-center">
+                  <svg class="h-3.5 w-3.5 text-primary-700 dark:text-primary-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5" />
+                  </svg>
+                </span>
+              </button>
+              <div id="tooltip-amount" role="tooltip" class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700">
+                <span id="default-tooltip-message-amount">Copy to clipboard</span>
+                <span id="success-tooltip-message-amount" class="hidden">Copied!</span>
+                <div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+            </div>
+          </div>
+          <div class="flex w-full items-center space-x-4">
+            <button type="button" class="flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">
+              <svg class="-ms-2 me-2 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 10V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1v6M5 19v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1M10 3v4a1 1 0 0 1-1 1H5m2.665 9H6.647A1.647 1.647 0 0 1 5 15.353v-1.706A1.647 1.647 0 0 1 6.647 12h1.018M16 12l1.443 4.773L19 12m-6.057-.152-.943-.02a1.34 1.34 0 0 0-1.359 1.22 1.32 1.32 0 0 0 1.172 1.421l.536.059a1.273 1.273 0 0 1 1.226 1.718c-.2.571-.636.754-1.337.754h-1.13"
+                />
+              </svg>
+              Download CSV
+            </button>
+            <button type="button" class="flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">
+              <svg class="-ms-2 me-2 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 17v-5h1.5a1.5 1.5 0 1 1 0 3H5m12 2v-5h2m-2 3h2M5 10V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1v6M5 19v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1M10 3v4a1 1 0 0 1-1 1H5m6 4v5h1.375A1.627 1.627 0 0 0 14 15.375v-1.75A1.627 1.627 0 0 0 12.375 12H11Z" />
+              </svg>
+              Download PDF
+            </button>
+          </div>
+        </div>
+        <div>
+          <label for="currency" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Currency</label>
+          <div class="relative">
+            <input id="currency" type="text" class="col-span-6 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm font-medium text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" value="USD" disabled readonly />
+            <button type="button" data-copy-to-clipboard-target="currency" data-tooltip-target="tooltip-currency" class="absolute end-2 top-1/2 inline-flex -translate-y-1/2 items-center justify-center rounded-lg p-2 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
+              <span id="default-icon-currency">
+                <svg class="h-3.5 w-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                  <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z" />
+                </svg>
+              </span>
+              <span id="success-icon-currency" class="inline-flex hidden items-center">
+                <svg class="h-3.5 w-3.5 text-primary-700 dark:text-primary-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5" />
+                </svg>
+              </span>
+            </button>
+            <div id="tooltip-currency" role="tooltip" class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700">
+              <span id="default-tooltip-message-currency">Copy to clipboard</span>
+              <span id="success-tooltip-message-currency" class="hidden">Copied!</span>
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <label for="beneficiary" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Beneficiary</label>
+          <div class="relative">
+            <input id="beneficiary" type="text" class="col-span-6 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm font-medium text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-primary-500 dark:focus:ring-primary-500" value="Flowbite LLC" disabled readonly />
+            <button type="button" data-copy-to-clipboard-target="beneficiary" data-tooltip-target="tooltip-beneficiary" class="absolute end-2 top-1/2 inline-flex -translate-y-1/2 items-center justify-center rounded-lg p-2 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
+              <span id="default-icon-beneficiary">
+                <svg class="h-3.5 w-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                  <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z" />
+                </svg>
+              </span>
+              <span id="success-icon-beneficiary" class="inline-flex hidden items-center">
+                <svg class="h-3.5 w-3.5 text-primary-700 dark:text-primary-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5" />
+                </svg>
+              </span>
+            </button>
+            <div id="tooltip-beneficiary" role="tooltip" class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700">
+              <span id="default-tooltip-message-beneficiary">Copy to clipboard</span>
+              <span id="success-tooltip-message-beneficiary" class="hidden">Copied!</span>
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <label for="account-number" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Account number</label>
+          <div class="relative">
+            <input id="account-number" type="text" class="col-span-6 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm font-medium text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" value="FB00 1234 5678 91011" disabled readonly />
+            <button type="button" data-copy-to-clipboard-target="account-number" data-tooltip-target="tooltip-account-number" class="absolute end-2 top-1/2 inline-flex -translate-y-1/2 items-center justify-center rounded-lg p-2 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
+              <span id="default-icon-account-number">
+                <svg class="h-3.5 w-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                  <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z" />
+                </svg>
+              </span>
+              <span id="success-icon-account-number" class="inline-flex hidden items-center">
+                <svg class="h-3.5 w-3.5 text-primary-700 dark:text-primary-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5" />
+                </svg>
+              </span>
+            </button>
+            <div id="tooltip-account-number" role="tooltip" class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700">
+              <span id="default-tooltip-message-account-number">Copy to clipboard</span>
+              <span id="success-tooltip-message-account-number" class="hidden">Copied!</span>
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <label for="swift-code" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">SWIFT/BIC code</label>
+          <div class="relative">
+            <input id="swift-code" type="text" class="col-span-6 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm font-medium text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" value="FBU345SS" disabled readonly />
+            <button type="button" data-copy-to-clipboard-target="swift-code" data-tooltip-target="tooltip-swift-code" class="absolute end-2 top-1/2 inline-flex -translate-y-1/2 items-center justify-center rounded-lg p-2 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
+              <span id="default-icon-swift-code">
+                <svg class="h-3.5 w-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                  <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z" />
+                </svg>
+              </span>
+              <span id="success-icon-swift-code" class="inline-flex hidden items-center">
+                <svg class="h-3.5 w-3.5 text-primary-700 dark:text-primary-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5" />
+                </svg>
+              </span>
+            </button>
+            <div id="tooltip-swift-code" role="tooltip" class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700">
+              <span id="default-tooltip-message-swift-code">Copy to clipboard</span>
+              <span id="success-tooltip-message-swift-code" class="hidden">Copied!</span>
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <label for="address" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Bank address:</label>
+          <div class="relative">
+            <input id="address" type="text" class="col-span-6 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm font-medium text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" value="62 Miles Drive St, Newark, NJ 07103, California" disabled readonly />
+            <button type="button" data-copy-to-clipboard-target="address" data-tooltip-target="tooltip-address" class="absolute end-2 top-1/2 inline-flex -translate-y-1/2 items-center justify-center rounded-lg p-2 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
+              <span id="default-icon-address">
+                <svg class="h-3.5 w-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                  <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z" />
+                </svg>
+              </span>
+              <span id="success-icon-address" class="inline-flex hidden items-center">
+                <svg class="h-3.5 w-3.5 text-primary-700 dark:text-primary-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5" />
+                </svg>
+              </span>
+            </button>
+            <div id="tooltip-address" role="tooltip" class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700">
+              <span id="default-tooltip-message-address">Copy to clipboard</span>
+              <span id="success-tooltip-message-address" class="hidden">Copied!</span>
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Confirm payment</button>
+      <p class="mt-6 text-center text-base font-normal text-gray-500 dark:text-gray-400 sm:mt-8 lg:text-left">Payment processed by <a href="#" title="" class="font-medium text-primary-700 underline hover:no-underline dark:text-primary-500">Paddle</a> for <a href="#" title="" class="font-medium text-primary-700 underline hover:no-underline dark:text-primary-500">Flowbite LLC</a> - United States Of America</p>
+    </form>
+  </div>
+</section>
+
+window.addEventListener("load", function () {
+  // Define a map of keys and their corresponding class names for tooltip and icons
+  const map = {
+    amount: "tooltip-amount default-icon-amount success-icon-amount",
+    currency: "tooltip-currency default-icon-currency success-icon-currency",
+    beneficiary: "tooltip-beneficiary default-icon-beneficiary success-icon-beneficiary",
+    "account-number": "tooltip-account-number default-icon-account-number success-icon-account-number",
+    "swift-code": "tooltip-swift-code default-icon-swift-code success-icon-swift-code",
+    address: "tooltip-address default-icon-address success-icon-address",
+  };
+
+  // Iterate over the map
+  Object.entries(map).forEach(([key, classNames]) => {
+    // Split the classNames into separate variables for tooltip and icon IDs
+    const [tooltipId, defaultId, successId] = classNames.split(" ");
+    // Get instances and elements based on the key and IDs
+    const clipboard = FlowbiteInstances.getInstance("CopyClipboard", key);
+    const tooltip = FlowbiteInstances.getInstance("Tooltip", tooltipId);
+    const defaultMessage = document.getElementById(defaultId);
+    const successMessage = document.getElementById(successId);
+    const defaultIcon = document.getElementById(`default-tooltip-message-${key}`);
+    const successIcon = document.getElementById(`success-tooltip-message-${key}`);
+
+    // Attach event listener for clipboard copying
+    clipboard.updateOnCopyCallback(() => {
+      // Show success messages and icons
+      showSuccess(defaultMessage, successMessage);
+      showSuccess(defaultIcon, successIcon);
+      // Show tooltip
+      tooltip.show();
+      // Reset to default state after 2 seconds
+      setTimeout(() => {
+        resetToDefault(defaultMessage, successMessage);
+        resetToDefault(defaultIcon, successIcon);
+        tooltip.hide();
+      }, 2000);
+    });
+  });
+
+  // Function to show success message and icon
+  const showSuccess = ($defaultEl, $successEl) => {
+    $defaultEl.classList.add("hidden");
+    $successEl.classList.remove("hidden");
+  };
+
+  // Function to reset to default state
+  const resetToDefault = ($defaultEl, $successEl) => {
+    $defaultEl.classList.remove("hidden");
+    $successEl.classList.add("hidden");
+  };
+});

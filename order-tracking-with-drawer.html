@@ -1,0 +1,142 @@
+<div class="m-5 text-center">
+  <button id="orderTrackingButton" class="rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" type="button" data-drawer-target="orderTrackingDrawer" data-drawer-show="orderTrackingDrawer" aria-controls="orderTrackingDrawer">Show order tracking drawer</button>
+</div>
+
+<div id="orderTrackingDrawer" class="fixed left-0 top-0 z-40 flex h-screen w-full max-w-md -translate-x-full flex-col justify-between overflow-y-auto bg-white p-4 antialiased transition-transform dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-label" aria-hidden="true">
+  <div class="flex-1 space-y-6">
+    <div class="flex items-center justify-between">
+      <h3 class="text-base font-semibold uppercase leading-none text-gray-500 dark:text-gray-400">Track the delivery of order #957684673</h3>
+
+      <button type="button" data-drawer-dismiss="orderTrackingDrawer" data-drawer-hide="orderTrackingDrawer" class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+        <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
+        </svg>
+      </button>
+    </div>
+    <ol class="relative ms-3 border-s border-gray-200 dark:border-gray-700">
+      <li class="mb-10 ms-6">
+        <span class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-gray-100 ring-8 ring-white dark:bg-gray-700 dark:ring-gray-800">
+          <svg class="h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5" />
+          </svg>
+        </span>
+        <h3 class="mb-0.5 text-base font-semibold text-gray-900 dark:text-white">Estimated delivery in 24 Nov 2023</h3>
+        <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Products delivered</p>
+      </li>
+
+      <li class="mb-10 ms-6">
+        <span class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-gray-100 ring-8 ring-white dark:bg-gray-700 dark:ring-gray-800">
+          <svg class="h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h6l2 4m-8-4v8m0-8V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v9h2m8 0H9m4 0h2m4 0h2v-4m0 0h-5m3.5 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
+          </svg>
+        </span>
+        <h3 class="mb-0.5 text-base font-semibold text-gray-900 dark:text-white">Today</h3>
+        <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Products being delivered</p>
+      </li>
+
+      <li class="mb-10 ms-6 text-primary-700 dark:text-primary-500">
+        <span class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-100 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-800">
+          <svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5" />
+          </svg>
+        </span>
+        <h3 class="mb-0.5 font-semibold">23 Nov 2023, 15:15</h3>
+        <p class="text-sm">Products in the courier's warehouse</p>
+      </li>
+
+      <li class="mb-10 ms-6 text-primary-700 dark:text-primary-500">
+        <span class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-100 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-800">
+          <svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5" />
+          </svg>
+        </span>
+        <h3 class="mb-0.5 text-base font-semibold">22 Nov 2023, 12:27</h3>
+        <p class="text-sm">Products delivered to the courier - DHL Express</p>
+      </li>
+
+      <li class="mb-10 ms-6 text-primary-700 dark:text-primary-500">
+        <span class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-100 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-800">
+          <svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5" />
+          </svg>
+        </span>
+        <h3 class="mb-0.5 font-semibold">19 Nov 2023, 10:47</h3>
+        <p class="text-sm">Payment accepted - VISA Credit Card</p>
+      </li>
+
+      <li class="ms-6 text-primary-700 dark:text-primary-500">
+        <span class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-100 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-800">
+          <svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5" />
+          </svg>
+        </span>
+        <div>
+          <h3 class="mb-0.5 font-semibold">19 Nov 2023, 10:45</h3>
+          <a href="#" class="text-sm font-medium hover:underline">Order placed - Receipt #647563</a>
+        </div>
+      </li>
+    </ol>
+    <div class="space-y-4 rounded-lg border border-gray-100 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700">
+      <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Billing information</h4>
+
+      <dl>
+        <dt class="text-base font-medium text-gray-900 dark:text-white">Company</dt>
+        <dd class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">Bergside LLC, VAT 123456, (+1) 234 567 890</dd>
+      </dl>
+    </div>
+
+    <div class="space-y-4 rounded-lg border border-gray-100 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700">
+      <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Delivery information</h4>
+
+      <dl>
+        <dt class="text-base font-medium text-gray-900 dark:text-white">DHL Express</dt>
+        <dd class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">3454 Scott Street, San Francisco, California, United States</dd>
+      </dl>
+    </div>
+
+    <div class="space-y-4 rounded-lg border border-gray-100 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700">
+      <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Payment method</h4>
+
+      <p class="text-base font-medium text-gray-900 dark:text-white">Online with credit card</p>
+    </div>
+    <!-- Total price -->
+    <div class="rounded-lg border border-gray-100 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700">
+      <h4 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Order amount</h4>
+
+      <dl class="mb-2 flex items-center justify-between gap-4">
+        <dt class="font-normal text-gray-500 dark:text-gray-400">Subtotal</dt>
+        <dd class="font-medium text-gray-900 dark:text-white">$5,992</dd>
+      </dl>
+
+      <dl class="mb-2 flex items-center justify-between gap-4">
+        <dt class="font-normal text-gray-500 dark:text-gray-400">Savings</dt>
+        <dd class="font-medium text-green-500 dark:text-green-400">$0</dd>
+      </dl>
+
+      <dl class="mb-2 flex items-center justify-between gap-4">
+        <dt class="font-normal text-gray-500 dark:text-gray-400">Store Pickup</dt>
+        <dd class="font-medium text-gray-900 dark:text-white">$99</dd>
+      </dl>
+
+      <dl class="mb-2 flex items-center justify-between gap-4">
+        <dt class="font-normal text-gray-500 dark:text-gray-400">Tax</dt>
+        <dd class="font-medium text-gray-900 dark:text-white">$199</dd>
+      </dl>
+
+      <dl class="mt-4 flex items-center justify-between gap-4 border-t border-gray-200 pt-2 font-bold text-gray-900 dark:border-gray-700 dark:text-white">
+        <dt>Total</dt>
+        <dd>$6,290</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="mt-8 gap-4 sm:flex sm:items-center sm:justify-center">
+    <a href="#" class="mb-4 flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600  dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:mb-0 sm:mt-0">Order details</a>
+    <button type="button" data-drawer-dismiss="orderTrackingDrawer" data-drawer-hide="orderTrackingDrawer" class="block w-full rounded-lg  border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">Cancel the order</button>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    document.getElementById('orderTrackingButton').click();
+});
+</script>
