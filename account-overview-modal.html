@@ -1,0 +1,195 @@
+<div class="m-5 flex justify-center">
+  <button id="accountOverviewButton" data-modal-target="accountOverviewModal" data-modal-toggle="accountOverviewModal" class="block rounded-lg bg-primary-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" type="button">Show account overview</button>
+</div>
+
+<form action="#" id="accountOverviewModal" tabindex="-1" aria-hidden="true" class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden antialiased md:inset-0">
+  <div class="relative max-h-full w-full max-w-4xl p-4 lg:p-0">
+    <!-- Modal content -->
+    <div class="relative rounded-lg bg-white p-4 shadow dark:bg-gray-800 md:p-5">
+      <!-- Modal header -->
+      <div class="flex items-center justify-between rounded-t border-b pb-4 dark:border-gray-700">
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">My account</h3>
+        <button type="button" class="ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="accountOverviewModal">
+          <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+          <span class="sr-only">Close modal</span>
+        </button>
+      </div>
+      <div class="grid gap-4 md:grid-cols-4">
+        <!-- Sidenav -->
+        <aside id="sidebar" class="col-span-3 shrink-0 overflow-y-auto border-gray-200 pt-4 dark:border-gray-700 md:col-span-1 md:border-e md:pe-3 md:pt-5">
+          <ul class="grid w-full grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-1">
+            <li>
+              <a href="#" class="group flex items-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                <svg class="h-6 w-6 shrink-0 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5" />
+                </svg>
+                <span class="ml-3 flex-1 whitespace-nowrap">Overview</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="group flex items-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                <svg class="h-6 w-6 shrink-0 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h6l2 4m-8-4v8m0-8V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v9h2m8 0H9m4 0h2m4 0h2v-4m0 0h-5m3.5 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
+                </svg>
+                <span class="ml-3">My orders</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="group flex items-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                <svg class="h-6 w-6 shrink-0 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-width="2" d="M11.083 5.104c.35-.8 1.485-.8 1.834 0l1.752 4.022a1 1 0 0 0 .84.597l4.463.342c.9.069 1.255 1.2.556 1.771l-3.33 2.723a1 1 0 0 0-.337 1.016l1.03 4.119c.214.858-.71 1.552-1.474 1.106l-3.913-2.281a1 1 0 0 0-1.008 0L7.583 20.8c-.764.446-1.688-.248-1.474-1.106l1.03-4.119A1 1 0 0 0 6.8 14.56l-3.33-2.723c-.698-.571-.342-1.702.557-1.771l4.462-.342a1 1 0 0 0 .84-.597l1.753-4.022Z" />
+                </svg>
+                <span class="ml-3 flex-1 whitespace-nowrap">Reviews</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="group flex items-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                <svg class="h-6 w-6 shrink-0 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9h13a5 5 0 0 1 0 10H7M3 9l4-4M3 9l4 4" />
+                </svg>
+                <span class="ml-3 flex-1 whitespace-nowrap">My returns</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="group flex items-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                <svg class="h-6 w-6 shrink-0 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 13v-2a1 1 0 0 0-1-1h-.757l-.707-1.707.535-.536a1 1 0 0 0 0-1.414l-1.414-1.414a1 1 0 0 0-1.414 0l-.536.535L14 4.757V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v.757l-1.707.707-.536-.535a1 1 0 0 0-1.414 0L4.929 6.343a1 1 0 0 0 0 1.414l.536.536L4.757 10H4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h.757l.707 1.707-.535.536a1 1 0 0 0 0 1.414l1.414 1.414a1 1 0 0 0 1.414 0l.536-.535 1.707.707V20a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-.757l1.707-.708.536.536a1 1 0 0 0 1.414 0l1.414-1.414a1 1 0 0 0 0-1.414l-.535-.536.707-1.707H20a1 1 0 0 0 1-1Z"
+                  />
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                </svg>
+                <span class="ml-3 flex-1 whitespace-nowrap">Settings</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="group flex items-center rounded-lg p-2 text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                <svg class="h-6 w-6 shrink-0 text-gray-400 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H8m12 0-4 4m4-4-4-4M9 4H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h2" />
+                </svg>
+                <span class="ml-3 flex-1 whitespace-nowrap">Log out</span>
+              </a>
+            </li>
+          </ul>
+        </aside>
+        <div class="col-span-3 md:pt-5">
+          <div class="col-span-2 mb-4 grid grid-cols-2 gap-4 rounded-lg border border-gray-200 p-4 pt-4 shadow-sm dark:border-gray-600 dark:bg-gray-700 md:grid-cols-3">
+            <div>
+              <div class="mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-gray-100 text-gray-500 dark:bg-gray-600 dark:text-gray-400">
+                <svg class="h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white">10 orders</h2>
+                <p class="text-gray-500 dark:text-gray-400"><span class="hidden sm:inline">in the</span> last 90 days</p>
+              </div>
+            </div>
+            <div>
+              <div class="mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-gray-100 text-gray-500 dark:bg-gray-600 dark:text-gray-400">
+                <svg class="h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9h13a5 5 0 0 1 0 10H7M3 9l4-4M3 9l4 4" />
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white">3 returns</h2>
+                <p class="text-gray-500 dark:text-gray-400"><span class="hidden sm:inline">in the</span> last 90 days</p>
+              </div>
+            </div>
+            <div>
+              <div class="mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-gray-100 text-gray-500 dark:bg-gray-600 dark:text-gray-400">
+                <svg class="h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-width="2" d="M11.083 5.104c.35-.8 1.485-.8 1.834 0l1.752 4.022a1 1 0 0 0 .84.597l4.463.342c.9.069 1.255 1.2.556 1.771l-3.33 2.723a1 1 0 0 0-.337 1.016l1.03 4.119c.214.858-.71 1.552-1.474 1.106l-3.913-2.281a1 1 0 0 0-1.008 0L7.583 20.8c-.764.446-1.688-.248-1.474-1.106l1.03-4.119A1 1 0 0 0 6.8 14.56l-3.33-2.723c-.698-.571-.342-1.702.557-1.771l4.462-.342a1 1 0 0 0 .84-.597l1.753-4.022Z" />
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white">10 reviews</h2>
+                <p class="text-gray-500 dark:text-gray-400"><span class="hidden sm:inline">in the</span> last 90 days</p>
+              </div>
+            </div>
+          </div>
+          <div class="grid gap-4 lg:grid-cols-2">
+            <div class="col-span-2 rounded-lg border border-gray-200 p-4 shadow-sm dark:border-gray-600 dark:bg-gray-700 lg:col-span-1">
+              <h3 class="mb-4 text-lg font-bold dark:text-white">More ways to pay</h3>
+              <ul role="list" class="mt-4 space-y-2 text-primary-700 dark:text-primary-500">
+                <li>
+                  <a href="#" class="hover:underline">Your purchase preferences</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Vouchers</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Shop with points</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Product ouchers</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Flowbite pay</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-span-2 rounded-lg border border-gray-200 p-4 shadow-sm dark:border-gray-600 dark:bg-gray-700 lg:col-span-1">
+              <h3 class="mb-4 text-lg font-bold dark:text-white">Manage your data</h3>
+              <ul role="list" class="mt-4 space-y-2 text-primary-700 dark:text-primary-500">
+                <li>
+                  <a href="#" class="hover:underline">Request your data</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Transfer your data</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Data use between services</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Privacy Notice</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Seller Data Sharing Preferences</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-span-2 rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-600 dark:bg-gray-700 md:col-span-1">
+              <div class="mb-4">
+                <h3 class="text-lg font-bold leading-none text-gray-900 dark:text-white">Favorite pick-up point</h3>
+              </div>
+              <h4 class="mt-2 inline-flex items-center font-semibold text-gray-900 dark:text-white">Macy's pickup locker <span class="ms-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300">Default</span></h4>
+              <address class="text-gray-500 dark:text-gray-400">Herald Square, 2, New York, United States of America</address>
+              <div class="mt-4">
+                <button type="button" class="inline-flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:w-auto">
+                  <svg class="-ms-0.5 me-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"></path>
+                  </svg>
+                  Edit
+                </button>
+              </div>
+            </div>
+            <div class="col-span-2 rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-600 dark:bg-gray-700 md:col-span-1">
+              <div class="mb-4">
+                <h3 class="text-lg font-bold leading-none text-gray-900 dark:text-white">My addresses</h3>
+              </div>
+              <h4 class="mt-2 inline-flex items-center font-semibold text-gray-900 dark:text-white">Bonnie Green <span class="ms-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300">Default</span></h4>
+              <address class="text-gray-500 dark:text-gray-400">2 Miles Drive, NJ 071, New York, United States of America</address>
+              <div class="mt-4">
+                <button type="button" class="inline-flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:w-auto">
+                  <svg class="-ms-0.5 me-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"></path>
+                  </svg>
+                  Edit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    document.getElementById('accountOverviewButton').click();
+});
+</script>
