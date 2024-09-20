@@ -1,0 +1,39 @@
+<div id="signup-popup" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full px-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  <div class="relative w-full max-w-lg max-h-full">
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 md:p-6 p-4">
+      <button type="button" id="closeModal" class="absolute right-1 top-1 inline-flex items-center rounded-lg p-1.5 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-700 dark:hover:text-white" id="close-modal" data-collapse-toggle="sign-up-pop-up">
+          <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
+          </svg>
+        </button>
+        <div class="items-center space-y-4 sm:flex sm:space-y-0">
+          <img class="h-28 dark:hidden sm:mx-auto" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/girl-with-rocket.svg" alt="girl with rocket illustration" />
+          <img class="hidden h-28 dark:block sm:mx-auto" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/girl-with-rocket-dark.svg" alt="girl with rocket illustration" />
+          <div class="sm:ps-6">
+            <h3 class="mb-2 font-semibold text-gray-900 dark:text-white">Today's deal for gaming weekend</h3>
+            <p class="mb-4 text-base leading-relaxed text-gray-500 dark:text-gray-400">You get up to <span class="font-medium text-gray-900 dark:text-white">-30%</span> extra on purchase of <span class="font-medium text-gray-900 dark:text-white">least $100</span> with the <span class="font-medium text-gray-900 dark:text-white">crazygaming</span> code!</p>
+            <a href="#" class="inline-flex items-center font-medium text-primary-700 hover:underline dark:text-primary-500">
+              See the offer
+              <svg class="ms-1 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const modalEl = document.getElementById('signup-popup');
+const discountModal = new Modal(modalEl, {
+    placement: 'bottom-right'
+});
+
+discountModal.show();
+
+const closeModalEl = document.getElementById('closeModal');
+closeModalEl.addEventListener('click', function() {
+    discountModal.hide();
+});
+  </script>
